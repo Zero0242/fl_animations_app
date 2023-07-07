@@ -46,10 +46,7 @@ class _GraficasCirculasPageState extends State<GraficasCirculasPage> {
 }
 
 class CustomRadialProgress extends StatelessWidget {
-  const CustomRadialProgress({
-    super.key,
-    required this.porcentaje,
-  });
+  const CustomRadialProgress({super.key, required this.porcentaje});
 
   final double porcentaje;
 

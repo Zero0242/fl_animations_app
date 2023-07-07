@@ -1,4 +1,5 @@
 import 'package:animations_app/pages/graficas_circulaes.dart';
+import 'package:animations_app/pages/slide_show_page.dart';
 import 'package:animations_app/widgets/diagonal_paint.dart';
 import 'package:animations_app/widgets/wave_painter.dart';
 import 'package:flutter/material.dart';
@@ -20,32 +21,17 @@ class HomePage extends StatelessWidget {
             height: size.height - kBottomNavigationBarHeight,
             width: size.width,
             color: Colors.orange,
-            child: Center(
-              child: ElevatedButton(
-                  onPressed: () => Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (_) => const GraficasCirculasPage(),
-                        ),
-                      ),
-                  child: const Text('Go to test page')),
-            ),
-          ),
-          SizedBox(height: size.height / 36),
-          Container(
-            height: size.height - kBottomNavigationBarHeight,
-            width: size.width,
-            color: Colors.orange,
             child: CustomPaint(
               painter: CurvedPainterGradient(),
-              child: const Center(
-                child: Text(
-                  'Este es un painter con gradiente',
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 24,
-                    color: Colors.purple,
+              child: Center(
+                child: ElevatedButton(
+                  onPressed: () => Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (_) => const GraficasCirculasPage(),
+                    ),
                   ),
+                  child: const Text('Go to test page'),
                 ),
               ),
             ),
@@ -57,14 +43,15 @@ class HomePage extends StatelessWidget {
             color: Colors.orange,
             child: CustomPaint(
               painter: WavedPainter(),
-              child: const Center(
-                child: Text(
-                  'Este es un painter con curvas',
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 24,
-                    color: Colors.purple,
+              child: Center(
+                child: ElevatedButton(
+                  onPressed: () => Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (_) => const SlideShowPage(),
+                    ),
                   ),
+                  child: const Text('Go to test page'),
                 ),
               ),
             ),
