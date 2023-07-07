@@ -1,4 +1,4 @@
-import 'package:animations_app/misc/circular_progress_page.dart';
+import 'package:animations_app/pages/graficas_circulaes.dart';
 import 'package:animations_app/widgets/diagonal_paint.dart';
 import 'package:animations_app/widgets/wave_painter.dart';
 import 'package:flutter/material.dart';
@@ -25,7 +25,7 @@ class HomePage extends StatelessWidget {
                   onPressed: () => Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (_) => const CircularProgressPage(),
+                          builder: (_) => const GraficasCirculasPage(),
                         ),
                       ),
                   child: const Text('Go to test page')),
