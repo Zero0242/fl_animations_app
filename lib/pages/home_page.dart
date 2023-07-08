@@ -1,9 +1,11 @@
+import 'package:animations_app/pages/emergency_page.dart';
 import 'package:animations_app/pages/graficas_circulaes.dart';
 import 'package:animations_app/pages/pinterest_page.dart';
 import 'package:animations_app/widgets/diagonal_paint.dart';
 import 'package:animations_app/widgets/wave_painter.dart';
 import 'package:flutter/material.dart';
 
+import '../widgets/animated_painter.dart';
 import '../widgets/wave_gradient_painter.dart';
 import 'slideshow_page.dart';
 
@@ -18,6 +20,22 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(title: const Text('Playground')),
       body: ListView(
         children: [
+          Container(
+            height: size.height - kBottomNavigationBarHeight,
+            width: size.width,
+            color: Colors.orange,
+            child: GradientAnimation(
+              child: ElevatedButton(
+                onPressed: () => Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (_) => const EmergengyPage(),
+                  ),
+                ),
+                child: const Text('Go to emergency page'),
+              ),
+            ),
+          ),
+          SizedBox(height: size.height / 36),
           Container(
             height: size.height - kBottomNavigationBarHeight,
             width: size.width,
