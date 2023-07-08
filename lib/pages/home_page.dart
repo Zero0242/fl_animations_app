@@ -1,4 +1,5 @@
 import 'package:animations_app/pages/graficas_circulaes.dart';
+import 'package:animations_app/pages/pinterest_page.dart';
 import 'package:animations_app/widgets/diagonal_paint.dart';
 import 'package:animations_app/widgets/wave_painter.dart';
 import 'package:flutter/material.dart';
@@ -63,14 +64,14 @@ class HomePage extends StatelessWidget {
             color: Colors.orange,
             child: CustomPaint(
               painter: DiagonalPainter(),
-              child: const Center(
-                child: Text(
-                  'Este es un painter con diagonales',
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 24,
-                    color: Colors.purple,
+              child: Center(
+                child: ElevatedButton(
+                  onPressed: () => Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (_) => const PinterestPage(),
+                    ),
                   ),
+                  child: const Text('Go to pinterest page'),
                 ),
               ),
             ),
