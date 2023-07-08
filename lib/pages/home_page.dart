@@ -1,10 +1,10 @@
 import 'package:animations_app/pages/graficas_circulaes.dart';
-import 'package:animations_app/pages/slide_show_page.dart';
 import 'package:animations_app/widgets/diagonal_paint.dart';
 import 'package:animations_app/widgets/wave_painter.dart';
 import 'package:flutter/material.dart';
 
 import '../widgets/wave_gradient_painter.dart';
+import 'slideshow_page.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -31,7 +31,7 @@ class HomePage extends StatelessWidget {
                       builder: (_) => const GraficasCirculasPage(),
                     ),
                   ),
-                  child: const Text('Go to test page'),
+                  child: const Text('Go to animated progress'),
                 ),
               ),
             ),
@@ -51,7 +51,7 @@ class HomePage extends StatelessWidget {
                       builder: (_) => const SlideShowPage(),
                     ),
                   ),
-                  child: const Text('Go to test page'),
+                  child: const Text('Go to Slide Show'),
                 ),
               ),
             ),
