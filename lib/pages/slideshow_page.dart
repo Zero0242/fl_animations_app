@@ -9,15 +9,36 @@ class SlideShowPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text('Slider pages')),
-      body: const SlideShow(
-        activeColor: Colors.orange,
-        inactiveColor: Colors.white,
+      body: const Column(
         children: [
-          _Slide('assets/svgs/slide-1.svg'),
-          _Slide('assets/svgs/slide-2.svg'),
-          _Slide('assets/svgs/slide-3.svg'),
-          _Slide('assets/svgs/slide-4.svg'),
-          _Slide('assets/svgs/slide-5.svg'),
+          Expanded(
+            child: SlideShow(
+              activeColor: Colors.deepPurple,
+              inactiveColor: Colors.green,
+              ubicacion: Posicion.arriba,
+              children: [
+                _Slide('assets/svgs/slide-1.svg'),
+                _Slide('assets/svgs/slide-2.svg'),
+                _Slide('assets/svgs/slide-3.svg'),
+                _Slide('assets/svgs/slide-4.svg'),
+                _Slide('assets/svgs/slide-5.svg'),
+              ],
+            ),
+          ),
+          Expanded(
+            child: SlideShow(
+              activeColor: Colors.orange,
+              dotPrimario: 20,
+              inactiveColor: Colors.white,
+              children: [
+                _Slide('assets/svgs/slide-1.svg'),
+                _Slide('assets/svgs/slide-2.svg'),
+                _Slide('assets/svgs/slide-3.svg'),
+                _Slide('assets/svgs/slide-4.svg'),
+                _Slide('assets/svgs/slide-5.svg'),
+              ],
+            ),
+          ),
         ],
       ),
     );
