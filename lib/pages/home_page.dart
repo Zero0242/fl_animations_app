@@ -1,12 +1,12 @@
 import 'package:animations_app/pages/emergency_page.dart';
 import 'package:animations_app/pages/graficas_circulaes.dart';
 import 'package:animations_app/pages/pinterest_page.dart';
-import 'package:animations_app/widgets/diagonal_paint.dart';
-import 'package:animations_app/widgets/wave_painter.dart';
+import 'package:animations_app/widgets/paints/diagonal_paint.dart';
+import 'package:animations_app/widgets/paints/wave_painter.dart';
 import 'package:flutter/material.dart';
 
-import '../widgets/animated_painter.dart';
-import '../widgets/wave_gradient_painter.dart';
+import '../widgets/paints/animated_painter.dart';
+import '../widgets/paints/wave_gradient_painter.dart';
 import 'slideshow_page.dart';
 
 class HomePage extends StatelessWidget {
@@ -23,12 +23,12 @@ class HomePage extends StatelessWidget {
           Container(
             height: size.height - kBottomNavigationBarHeight,
             width: size.width,
-            color: Colors.orange,
+            color: Colors.black45,
             child: GradientAnimation(
               child: ElevatedButton(
                 onPressed: () => Navigator.of(context).push(
                   MaterialPageRoute(
-                    builder: (_) => const EmergengyPage(),
+                    builder: (_) => EmergengyPage(),
                   ),
                 ),
                 child: const Text('Go to emergency page'),

@@ -1,4 +1,4 @@
-import 'package:animations_app/widgets/slide_show.dart';
+import 'package:animations_app/widgets/slideshow/slide_show.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 

@@ -5,7 +5,6 @@ import 'package:flutter/material.dart';
 class GradientAnimation extends StatefulWidget {
   const GradientAnimation({super.key, required this.child});
   final Widget child;
-  // Todo: might add optional parameters to pass to the state
 
   @override
   State<GradientAnimation> createState() => _GradientAnimationState();
@@ -14,7 +13,6 @@ class GradientAnimation extends StatefulWidget {
 class _GradientAnimationState extends State<GradientAnimation>
     with SingleTickerProviderStateMixin {
   late AnimationController _controller;
-  late Animation<double> _animation;
   late Animation<double> _offset;
 
   @override
@@ -23,8 +21,7 @@ class _GradientAnimationState extends State<GradientAnimation>
         vsync: this, duration: const Duration(milliseconds: 5000))
       ..forward()
       ..repeat();
-    _animation = Tween<double>(begin: 0, end: pi * 2).animate(_controller);
-    _offset = Tween<double>(begin: 1, end: -1).animate(_controller);
+    _offset = Tween<double>(begin: 0, end: pi * 2).animate(_controller);
     super.initState();
   }
 
@@ -39,9 +36,8 @@ class _GradientAnimationState extends State<GradientAnimation>
     return AnimatedBuilder(
       animation: _controller,
       builder: (BuildContext context, Widget? child) {
-        // ToDo: create an animation for your widget and replace the child
         return CustomPaint(
-          painter: _AnimatedPainter(_animation.value, _offset.value),
+          painter: _AnimatedPainter(_offset.value),
           child: Center(child: widget.child),
         );
       },
@@ -50,24 +46,26 @@ class _GradientAnimationState extends State<GradientAnimation>
 }
 
 class _AnimatedPainter extends CustomPainter {
-  _AnimatedPainter(this.value, this.value2);
-  final double value;
+  _AnimatedPainter(this.value2);
   final double value2;
   @override
   void paint(Canvas canvas, Size size) {
-    final Gradient gradient = LinearGradient(
-      transform: GradientRotation(value),
+    Gradient gradient = LinearGradient(
+      transform: GradientRotation(value2),
+      begin: Alignment.bottomCenter,
+      end: Alignment.topCenter,
       colors: const [
+        Colors.pink,
+        Colors.purple,
         Colors.blue,
         Colors.yellow,
         Colors.redAccent,
         Colors.green,
-        Colors.black45,
       ],
     );
 
-    final rect =
-        Rect.fromCircle(center: Offset(size.width * value2, 0), radius: 360);
+    final rect = Rect.fromCircle(
+        center: Offset(size.width * 0.5, size.height * 0.5), radius: 360);
     final path = Path()
       ..moveTo(0, size.height)
       ..lineTo(0, size.height * 0.85)

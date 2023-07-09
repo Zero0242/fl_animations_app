@@ -9,6 +9,7 @@ environment:
   sdk: '>=3.0.5 <4.0.0'
 
 dependencies:
+  animate_do: ^3.0.2
   cupertino_icons: ^1.0.2
   flutter:
     sdk: flutter
