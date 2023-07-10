@@ -3,8 +3,20 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 
 class GradientAnimation extends StatefulWidget {
-  const GradientAnimation({super.key, required this.child});
+  const GradientAnimation({
+    super.key,
+    required this.child,
+    this.colors = const [
+      Colors.pink,
+      Colors.purple,
+      Colors.blue,
+      Colors.yellow,
+      Colors.redAccent,
+      Colors.green,
+    ],
+  });
   final Widget child;
+  final List<Color> colors;
 
   @override
   State<GradientAnimation> createState() => _GradientAnimationState();
@@ -37,7 +49,7 @@ class _GradientAnimationState extends State<GradientAnimation>
       animation: _controller,
       builder: (BuildContext context, Widget? child) {
         return CustomPaint(
-          painter: _AnimatedPainter(_offset.value),
+          painter: _AnimatedPainter(widget.colors, _offset.value),
           child: Center(child: widget.child),
         );
       },
@@ -46,7 +58,8 @@ class _GradientAnimationState extends State<GradientAnimation>
 }
 
 class _AnimatedPainter extends CustomPainter {
-  _AnimatedPainter(this.value2);
+  _AnimatedPainter(this.colors, this.value2);
+  final List<Color> colors;
   final double value2;
   @override
   void paint(Canvas canvas, Size size) {
@@ -54,14 +67,7 @@ class _AnimatedPainter extends CustomPainter {
       transform: GradientRotation(value2),
       begin: Alignment.bottomCenter,
       end: Alignment.topCenter,
-      colors: const [
-        Colors.pink,
-        Colors.purple,
-        Colors.blue,
-        Colors.yellow,
-        Colors.redAccent,
-        Colors.green,
-      ],
+      colors: colors,
     );
 
     final rect = Rect.fromCircle(

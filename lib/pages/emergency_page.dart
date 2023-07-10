@@ -34,6 +34,7 @@ class EmergengyPage extends StatelessWidget {
   List<Widget> itemsMap() => items
       .map(
         (boton) => FadeInLeft(
+          duration: const Duration(milliseconds: 1500),
           child: BotonGordo(
             titulo: boton.title,
             colors: boton.colors,

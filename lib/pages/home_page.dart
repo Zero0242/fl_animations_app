@@ -1,6 +1,7 @@
 import 'package:animations_app/pages/emergency_page.dart';
 import 'package:animations_app/pages/graficas_circulaes.dart';
 import 'package:animations_app/pages/pinterest_page.dart';
+import 'package:animations_app/pages/sliverdemo_page.dart';
 import 'package:animations_app/widgets/paints/diagonal_paint.dart';
 import 'package:animations_app/widgets/paints/wave_painter.dart';
 import 'package:flutter/material.dart';
@@ -25,10 +26,33 @@ class HomePage extends StatelessWidget {
             width: size.width,
             color: Colors.black45,
             child: GradientAnimation(
+              colors: [
+                Colors.deepOrange,
+                Colors.deepOrangeAccent,
+                Colors.orange,
+                Colors.orange.withOpacity(0.8),
+                Colors.orangeAccent,
+              ],
               child: ElevatedButton(
                 onPressed: () => Navigator.of(context).push(
                   MaterialPageRoute(
-                    builder: (_) => EmergengyPage(),
+                    builder: (_) => const SliverDemoPage(),
+                  ),
+                ),
+                child: const Text('Go to sliver page'),
+              ),
+            ),
+          ),
+          SizedBox(height: size.height / 36),
+          Container(
+            height: size.height - kBottomNavigationBarHeight,
+            width: size.width,
+            color: Colors.black45,
+            child: GradientAnimation(
+              child: ElevatedButton(
+                onPressed: () => Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (_) => const EmergengyPage(),
                   ),
                 ),
                 child: const Text('Go to emergency page'),
