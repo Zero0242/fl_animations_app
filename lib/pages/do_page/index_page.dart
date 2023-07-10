@@ -1,4 +1,5 @@
 import 'package:animate_do/animate_do.dart';
+import 'package:animations_app/pages/do_page/navegacion_page.dart';
 import 'package:animations_app/pages/do_page/twitter_page.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -13,10 +14,6 @@ class BasicsAnimationPage extends StatelessWidget {
         title: FadeIn(child: const Text('Animated page')),
         actions: [
           IconButton(
-            onPressed: () {},
-            icon: const Icon(Icons.navigate_next),
-          ),
-          IconButton(
             onPressed: () {
               Navigator.of(context).push(MaterialPageRoute(
                 builder: (context) => const TwitterPage(),
@@ -28,7 +25,13 @@ class BasicsAnimationPage extends StatelessWidget {
       ),
       floatingActionButton: BounceInRight(
         child: FloatingActionButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.of(context).push(
+              MaterialPageRoute(
+                builder: (_) => const NavegacionPage(),
+              ),
+            );
+          },
           child: const FaIcon(FontAwesomeIcons.play),
         ),
       ),

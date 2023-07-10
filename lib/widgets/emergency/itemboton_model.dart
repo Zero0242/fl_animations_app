@@ -10,7 +10,7 @@ class ItemBoton {
 
 final items = <ItemBoton>[
   ItemBoton(
-    FontAwesomeIcons.carCrash,
+    FontAwesomeIcons.carBurst,
     'Motor Accident',
     [const Color(0xff6989F5), const Color(0xff906EF5)],
   ),
@@ -20,17 +20,17 @@ final items = <ItemBoton>[
     [const Color(0xff66A9F2), const Color(0xff536CF6)],
   ),
   ItemBoton(
-    FontAwesomeIcons.theaterMasks,
+    FontAwesomeIcons.masksTheater,
     'Theft / Harrasement',
     [const Color(0xffF2D572), const Color(0xffE06AA3)],
   ),
   ItemBoton(
-    FontAwesomeIcons.biking,
+    FontAwesomeIcons.personBiking,
     'Awards',
     [const Color(0xff317183), const Color(0xff46997D)],
   ),
   ItemBoton(
-    FontAwesomeIcons.carCrash,
+    FontAwesomeIcons.carBurst,
     'Motor Accident',
     [const Color(0xff6989F5), const Color(0xff906EF5)],
   ),
@@ -40,17 +40,17 @@ final items = <ItemBoton>[
     [const Color(0xff66A9F2), const Color(0xff536CF6)],
   ),
   ItemBoton(
-    FontAwesomeIcons.theaterMasks,
+    FontAwesomeIcons.masksTheater,
     'Theft / Harrasement',
     [const Color(0xffF2D572), const Color(0xffE06AA3)],
   ),
   ItemBoton(
-    FontAwesomeIcons.biking,
+    FontAwesomeIcons.personBiking,
     'Awards',
     [const Color(0xff317183), const Color(0xff46997D)],
   ),
   ItemBoton(
-    FontAwesomeIcons.carCrash,
+    FontAwesomeIcons.carBurst,
     'Motor Accident',
     [const Color(0xff6989F5), const Color(0xff906EF5)],
   ),
@@ -60,12 +60,12 @@ final items = <ItemBoton>[
     [const Color(0xff66A9F2), const Color(0xff536CF6)],
   ),
   ItemBoton(
-    FontAwesomeIcons.theaterMasks,
+    FontAwesomeIcons.masksTheater,
     'Theft / Harrasement',
     [const Color(0xffF2D572), const Color(0xffE06AA3)],
   ),
   ItemBoton(
-    FontAwesomeIcons.biking,
+    FontAwesomeIcons.personBiking,
     'Awards',
     [const Color(0xff317183), const Color(0xff46997D)],
   ),

@@ -1,15 +1,15 @@
 import 'package:animations_app/pages/do_page/index_page.dart';
-import 'package:animations_app/pages/emergency_page.dart';
-import 'package:animations_app/pages/graficas_circulaes.dart';
-import 'package:animations_app/pages/pinterest_page.dart';
-import 'package:animations_app/pages/sliverdemo_page.dart';
+import 'package:animations_app/pages/emergency/emergency_page.dart';
+import 'package:animations_app/pages/progress/graficas_circulaes.dart';
+import 'package:animations_app/pages/pinterest/pinterest_page.dart';
+import 'package:animations_app/pages/sliver/sliverdemo_page.dart';
 import 'package:animations_app/widgets/paints/diagonal_paint.dart';
 import 'package:animations_app/widgets/paints/wave_painter.dart';
 import 'package:flutter/material.dart';
 
 import '../widgets/paints/animated_painter.dart';
 import '../widgets/paints/wave_gradient_painter.dart';
-import 'slideshow_page.dart';
+import 'slideshow/slideshow_page.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -22,6 +22,18 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(title: const Text('Playground')),
       body: ListView(
         children: [
+          Container(
+            height: size.height - kBottomNavigationBarHeight,
+            width: size.width,
+            color: Colors.black45,
+            child: const GradientAnimation(
+              colors: [Colors.black, Colors.white],
+              child: Center(
+                child: FlutterLogo(),
+              ),
+            ),
+          ),
+          SizedBox(height: size.height / 36),
           Container(
             height: size.height - kBottomNavigationBarHeight,
             width: size.width,

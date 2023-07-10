@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../widgets/sliver/custom_appbar.dart';
-import '../widgets/sliver/custom_list_items.dart';
+import '../../widgets/sliver/custom_appbar.dart';
+import '../../widgets/sliver/custom_list_items.dart';
 
 class SliverDemoPage extends StatelessWidget {
   const SliverDemoPage({super.key});

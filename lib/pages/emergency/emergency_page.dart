@@ -3,8 +3,8 @@ import 'package:animations_app/widgets/emergency/icon_header.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-import '../widgets/emergency/boton_gordo.dart';
-import '../widgets/emergency/itemboton_model.dart';
+import '../../widgets/emergency/boton_gordo.dart';
+import '../../widgets/emergency/itemboton_model.dart';
 
 class EmergengyPage extends StatelessWidget {
   const EmergengyPage({super.key});
