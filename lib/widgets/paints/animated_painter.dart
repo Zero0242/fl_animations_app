@@ -6,6 +6,7 @@ class GradientAnimation extends StatefulWidget {
   const GradientAnimation({
     super.key,
     required this.child,
+    this.duration = const Duration(milliseconds: 5000),
     this.colors = const [
       Colors.pink,
       Colors.purple,
@@ -17,6 +18,7 @@ class GradientAnimation extends StatefulWidget {
   });
   final Widget child;
   final List<Color> colors;
+  final Duration duration;
 
   @override
   State<GradientAnimation> createState() => _GradientAnimationState();
@@ -29,8 +31,7 @@ class _GradientAnimationState extends State<GradientAnimation>
 
   @override
   void initState() {
-    _controller = AnimationController(
-        vsync: this, duration: const Duration(milliseconds: 5000))
+    _controller = AnimationController(vsync: this, duration: widget.duration)
       ..forward()
       ..repeat();
     _offset = Tween<double>(begin: 0, end: pi * 2).animate(_controller);
