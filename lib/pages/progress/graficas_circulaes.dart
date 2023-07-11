@@ -12,35 +12,36 @@ class _GraficasCirculasPageState extends State<GraficasCirculasPage> {
   double porcentaje = 0;
   @override
   Widget build(BuildContext context) {
+    final children = [
+      Row(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        children: [
+          CustomRadialProgress(porcentaje: porcentaje),
+          CustomRadialProgress(porcentaje: porcentaje),
+        ],
+      ),
+      Row(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        children: [
+          CustomRadialProgress(porcentaje: porcentaje),
+          CustomRadialProgress(porcentaje: porcentaje),
+        ],
+      ),
+    ];
+    final isLarge = MediaQuery.of(context).size.height > 500;
     return Scaffold(
-      appBar: AppBar(title: const Text('Graficas Animadas')),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          setState(() {
-            porcentaje >= 100 ? porcentaje = 0 : porcentaje += 10;
-          });
+          setState(() => porcentaje >= 100 ? porcentaje = 0 : porcentaje += 10);
         },
         child: const Icon(Icons.refresh, color: Colors.orange),
       ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
-              CustomRadialProgress(porcentaje: porcentaje),
-              CustomRadialProgress(porcentaje: porcentaje),
-            ],
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
-              CustomRadialProgress(porcentaje: porcentaje),
-              CustomRadialProgress(porcentaje: porcentaje),
-            ],
-          ),
-        ],
-      ),
+      body: isLarge
+          ? Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: children,
+            )
+          : ListView(children: children),
     );
   }
 }

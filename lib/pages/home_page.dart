@@ -19,7 +19,6 @@ class EncabezadosPage extends StatelessWidget {
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
     return Scaffold(
-      appBar: AppBar(title: const Text('Playground')),
       body: ListView(
         children: [
           Container(

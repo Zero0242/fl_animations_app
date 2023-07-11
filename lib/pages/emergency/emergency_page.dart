@@ -13,19 +13,14 @@ class EmergengyPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      body: Column(
+      body: ListView(
         children: [
           const IconHeader(
             icon: FontAwesomeIcons.plus,
             title: 'Has solicitado',
             subtitle: 'Asistencia Medica',
           ),
-          Expanded(
-            child: ListView(
-              physics: const BouncingScrollPhysics(),
-              children: itemsMap(),
-            ),
-          ),
+          ...itemsMap(),
         ],
       ),
     );

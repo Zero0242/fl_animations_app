@@ -9,7 +9,6 @@ class PinterestPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Pinterest Page Design')),
       body: ChangeNotifierProvider(
         create: (context) => _MenuModel(),
         child: Stack(
