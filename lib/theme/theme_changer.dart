@@ -32,7 +32,9 @@ class ThemeChanger with ChangeNotifier {
     _customTheme = false;
     _darkTheme = estado;
     if (estado) {
-      _currentTheme = ThemeData.dark();
+      _currentTheme = ThemeData.dark().copyWith(
+        appBarTheme: const AppBarTheme(backgroundColor: Colors.redAccent),
+      );
     } else {
       _currentTheme = ThemeData.light();
     }

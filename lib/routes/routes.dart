@@ -30,7 +30,7 @@ final pageRoutes = <_Route>[
   _Route(
     icon: FontAwesomeIcons.heading,
     titulo: 'Encabezados',
-    page: const HomePage(),
+    page: const EncabezadosPage(),
   ),
   _Route(
     icon: FontAwesomeIcons.peopleCarryBox,

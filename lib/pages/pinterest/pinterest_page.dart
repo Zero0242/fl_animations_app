@@ -29,17 +29,20 @@ class _PositionedButton extends StatelessWidget {
     final proveedor = Provider.of<_MenuModel>(context);
     return Align(
       alignment: Alignment.bottomCenter,
-      heightFactor: 12.5,
-      child: PinterestMenu(
-        mostrar: proveedor.mostrar,
-        activeColor: Colors.green,
-        inactiveColor: Colors.blue,
-        items: [
-          PinterestButton(icon: Icons.pie_chart, onPressed: () {}),
-          PinterestButton(icon: Icons.search, onPressed: () {}),
-          PinterestButton(icon: Icons.notifications, onPressed: () {}),
-          PinterestButton(icon: Icons.supervised_user_circle, onPressed: () {}),
-        ],
+      child: Padding(
+        padding: const EdgeInsets.only(bottom: 8.0),
+        child: PinterestMenu(
+          mostrar: proveedor.mostrar,
+          activeColor: Colors.green,
+          inactiveColor: Colors.blue,
+          items: [
+            PinterestButton(icon: Icons.pie_chart, onPressed: () {}),
+            PinterestButton(icon: Icons.search, onPressed: () {}),
+            PinterestButton(icon: Icons.notifications, onPressed: () {}),
+            PinterestButton(
+                icon: Icons.supervised_user_circle, onPressed: () {}),
+          ],
+        ),
       ),
     );
   }
@@ -75,14 +78,15 @@ class _PinterestGridState extends State<PinterestGrid> {
 
   @override
   Widget build(BuildContext context) {
+    final isLarge = MediaQuery.of(context).size.width > 500;
     return StaggeredGridView.countBuilder(
       controller: controller,
-      crossAxisCount: 4,
+      crossAxisCount: isLarge ? 3 : 4,
       itemCount: items.length,
       mainAxisSpacing: 4.0,
       crossAxisSpacing: 4.0,
       staggeredTileBuilder: (index) =>
-          StaggeredTile.count(2, index.isEven ? 2 : 3),
+          StaggeredTile.count(isLarge ? 1 : 2, index.isEven ? 2 : 3),
       itemBuilder: (context, index) => PinterestItem(index),
     );
   }

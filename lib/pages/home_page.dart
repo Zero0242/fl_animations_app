@@ -11,8 +11,8 @@ import '../widgets/paints/animated_painter.dart';
 import '../widgets/paints/wave_gradient_painter.dart';
 import 'slideshow/slideshow_page.dart';
 
-class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+class EncabezadosPage extends StatelessWidget {
+  const EncabezadosPage({super.key});
   static const String route = '/';
 
   @override
@@ -23,7 +23,7 @@ class HomePage extends StatelessWidget {
       body: ListView(
         children: [
           Container(
-            height: size.height - kBottomNavigationBarHeight,
+            height: size.height,
             width: size.width,
             color: Colors.black45,
             child: const GradientAnimation(
@@ -35,7 +35,7 @@ class HomePage extends StatelessWidget {
           ),
           SizedBox(height: size.height / 36),
           Container(
-            height: size.height - kBottomNavigationBarHeight,
+            height: size.height,
             width: size.width,
             color: Colors.black45,
             child: GradientAnimation(
@@ -61,7 +61,7 @@ class HomePage extends StatelessWidget {
           ),
           SizedBox(height: size.height / 36),
           Container(
-            height: size.height - kBottomNavigationBarHeight,
+            height: size.height,
             width: size.width,
             color: Colors.black45,
             child: GradientAnimation(
@@ -84,7 +84,7 @@ class HomePage extends StatelessWidget {
           ),
           SizedBox(height: size.height / 36),
           Container(
-            height: size.height - kBottomNavigationBarHeight,
+            height: size.height,
             width: size.width,
             color: Colors.black45,
             child: GradientAnimation(
@@ -100,7 +100,7 @@ class HomePage extends StatelessWidget {
           ),
           SizedBox(height: size.height / 36),
           Container(
-            height: size.height - kBottomNavigationBarHeight,
+            height: size.height,
             width: size.width,
             color: Colors.orange,
             child: CustomPaint(
@@ -120,7 +120,7 @@ class HomePage extends StatelessWidget {
           ),
           SizedBox(height: size.height / 36),
           Container(
-            height: size.height - kBottomNavigationBarHeight,
+            height: size.height,
             width: size.width,
             color: Colors.orange,
             child: CustomPaint(
@@ -140,7 +140,7 @@ class HomePage extends StatelessWidget {
           ),
           SizedBox(height: size.height / 36),
           Container(
-            height: size.height - kBottomNavigationBarHeight,
+            height: size.height,
             width: size.width,
             color: Colors.orange,
             child: CustomPaint(

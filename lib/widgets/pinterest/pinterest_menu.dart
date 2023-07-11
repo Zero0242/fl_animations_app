@@ -1,3 +1,4 @@
+import 'package:animations_app/theme/theme_changer.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -49,13 +50,13 @@ class _PinterestMenuBackground extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final bgColor = Provider.of<_MenuModel>(context).backgroundColor;
+    final appTheme = Provider.of<ThemeChanger>(context).currentTheme;
     return Container(
       width: 250,
       height: 60,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(100),
-        color: bgColor,
+        color: appTheme.scaffoldBackgroundColor,
         boxShadow: const [
           BoxShadow(
             color: Colors.white38,
