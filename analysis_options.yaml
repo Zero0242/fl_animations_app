@@ -1,1 +1,17 @@
 include: package:flutter_lints/flutter.yaml
+
+linter:
+  rules:
+    require_trailing_commas: true
+    always_declare_return_types: true
+    camel_case_types: true
+    slash_for_doc_comments: true
+    avoid_empty_else: true
+    dangling_library_doc_comments: true
+    empty_catches: true
+    constant_identifier_names: true
+    prefer_conditional_assignment: true
+    prefer_if_null_operators: true
+    prefer_interpolation_to_compose_strings: true
+    sort_constructors_first: true
+    use_build_context_synchronously: false
