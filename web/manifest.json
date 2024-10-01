@@ -1,6 +1,6 @@
 {
-    "name": "animations_app",
-    "short_name": "animations_app",
+    "name": "fl_animaciones",
+    "short_name": "fl_animaciones",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
