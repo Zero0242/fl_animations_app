@@ -2,3 +2,5 @@
 /// Mediante - export 'auth_controller.dart' -
 /// De esta forma los controladores se llaman desde aca
 library;
+
+export 'theme/theme_provider.dart';

@@ -1,23 +1,25 @@
+import 'package:fl_animaciones/presentation/providers/providers.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import 'config/config.dart';
 
 void main() {
-  runApp(const MainApp());
+  runApp(const ProviderScope(child: MainApp()));
 }
 
-class MainApp extends StatelessWidget {
+class MainApp extends ConsumerWidget {
   const MainApp({super.key});
 
   @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
+  Widget build(BuildContext context, WidgetRef ref) {
+    final isDarkMode = ref.watch(themeProvider);
+    final goRouter = ref.watch(goRouterProvider);
+    return MaterialApp.router(
       debugShowCheckedModeBanner: false,
       title: "Animaciones",
-      theme: AppTheme(isDarkMode: false).getTheme(),
-      // routes: AppRouter.rutasApp,
-      // initialRoute: AppRouter.root,
-      home: const Scaffold(),
+      theme: AppTheme(isDarkMode: isDarkMode).getTheme(),
+      routerConfig: goRouter,
     );
   }
 }

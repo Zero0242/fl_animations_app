@@ -1,28 +1,29 @@
-library;
+import 'package:flutter/foundation.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:go_router/go_router.dart';
 
 import '../../presentation/screens/screens.dart';
-import 'package:flutter/material.dart' show WidgetBuilder;
 
-/// Rutas de la app
-class AppRouter {
-  /// Pagina de inicio
-  static const String root = '/';
-
-  /// Implementacion rutas nativa
-  ///
-  /// Este es el listado de rutas vinculadas para navegacion
-  ///
-  /// ```dart
-  /// // Empujar ruta al stack
-  /// Navigator.of(context).pushNamed('/welcome');
-  ///
-  /// // Reemplazar ruta actual
-  /// Navigator.of(context).pushReplacementNamed('/welcome');
-  ///
-  /// ```
-  static final Map<String, WidgetBuilder> rutasApp = {
-    '/': (context) => const HomeScreen(),
-    '/login': (context) => const LoginScreen(),
-    '/register': (context) => const RegisterScreen(),
-  };
-}
+final goRouterProvider = Provider<GoRouter>((ref) {
+  return GoRouter(
+    debugLogDiagnostics: kDebugMode,
+    routes: [
+      GoRoute(
+        path: HomeScreen.route,
+        builder: (context, state) => const HomeScreen(),
+      ),
+      GoRoute(
+        path: LoginScreen.route,
+        builder: (context, state) => const LoginScreen(),
+      ),
+      GoRoute(
+        path: RegisterScreen.route,
+        builder: (context, state) => const RegisterScreen(),
+      ),
+      GoRoute(
+        path: DemoScreen.route,
+        builder: (context, state) => const DemoScreen(),
+      ),
+    ],
+  );
+});
