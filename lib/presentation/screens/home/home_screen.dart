@@ -15,6 +15,11 @@ class HomeScreen extends ConsumerWidget {
           titulo: 'Emergencia',
           page: EmergencyScreen.route,
         ),
+        _Route(
+          icon: FontAwesomeIcons.circleNotch,
+          titulo: 'Barra Progreso',
+          page: CircularProgressScreen.route,
+        ),
       ];
 
   @override

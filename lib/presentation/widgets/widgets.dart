@@ -3,5 +3,6 @@
 /// De esta forma los widgets se llaman desde este archivo
 library;
 
+export 'animated/radial_progress.dart';
 export 'buttons/thick_button.dart';
 export 'icons/icon_header.dart';
