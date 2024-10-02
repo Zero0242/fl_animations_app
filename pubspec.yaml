@@ -1,6 +1,6 @@
 name: fl_animaciones
 description: "A new Flutter project."
-publish_to: 'none'
+publish_to: "none"
 version: 0.1.0
 
 environment:
@@ -11,6 +11,7 @@ dependencies:
   flutter:
     sdk: flutter
   flutter_riverpod: ^2.5.1
+  flutter_svg: ^2.0.10+1
   font_awesome_flutter: ^10.7.0
   go_router: ^14.2.8
   google_fonts: ^6.2.1
@@ -25,3 +26,9 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+
+  assets:
+    - assets/icons/
+    - assets/images/
+    - assets/json/
+    - assets/svg/

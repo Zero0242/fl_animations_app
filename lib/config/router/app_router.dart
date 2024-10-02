@@ -25,6 +25,10 @@ final goRouterProvider = Provider<GoRouter>((ref) {
         path: CircularProgressScreen.route,
         builder: (context, state) => const CircularProgressScreen(),
       ),
+      GoRoute(
+        path: SlideShowScreen.route,
+        builder: (context, state) => const SlideShowScreen(),
+      ),
     ],
   );
 });
