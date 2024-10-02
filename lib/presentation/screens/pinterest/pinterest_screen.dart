@@ -1,6 +1,7 @@
 import 'package:fl_animaciones/presentation/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
+import 'package:go_router/go_router.dart';
 
 class PinterestScreen extends StatefulWidget {
   const PinterestScreen({super.key});
@@ -116,13 +117,18 @@ class _TileElement extends StatelessWidget {
         borderRadius: BorderRadius.circular(30),
         color: Colors.green,
       ),
-      child: CircleAvatar(
-        child: FadeInImage(
-          placeholder: const AssetImage('assets/images/loading.gif'),
-          image: NetworkImage(imageUrl),
-          imageErrorBuilder: (context, error, stackTrace) {
-            return Image.asset('assets/images/no-image.jpg');
-          },
+      child: InkWell(
+        onTap: () {
+          context.push('${PinterestScreen.route}/${index + 1}');
+        },
+        child: CircleAvatar(
+          child: FadeInImage(
+            placeholder: const AssetImage('assets/images/loading.gif'),
+            image: NetworkImage(imageUrl),
+            imageErrorBuilder: (context, error, stackTrace) {
+              return Image.asset('assets/images/no-image.jpg');
+            },
+          ),
         ),
       ),
     );

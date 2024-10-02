@@ -33,6 +33,13 @@ final goRouterProvider = Provider<GoRouter>((ref) {
         path: PinterestScreen.route,
         builder: (context, state) => const PinterestScreen(),
       ),
+      GoRoute(
+        path: PokemonDetailScreen.route,
+        builder: (context, state) {
+          int id = int.tryParse(state.pathParameters['id'] ?? '0') ?? 0;
+          return PokemonDetailScreen(id: id);
+        },
+      ),
     ],
   );
 });

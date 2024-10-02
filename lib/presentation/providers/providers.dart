@@ -3,4 +3,5 @@
 /// De esta forma los controladores se llaman desde aca
 library;
 
+export 'pinterest/pokemon_provider.dart';
 export 'theme/theme_provider.dart';
