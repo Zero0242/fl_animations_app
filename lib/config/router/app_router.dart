@@ -29,6 +29,10 @@ final goRouterProvider = Provider<GoRouter>((ref) {
         path: SlideShowScreen.route,
         builder: (context, state) => const SlideShowScreen(),
       ),
+      GoRoute(
+        path: PinterestScreen.route,
+        builder: (context, state) => const PinterestScreen(),
+      ),
     ],
   );
 });

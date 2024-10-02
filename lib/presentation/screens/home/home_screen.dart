@@ -25,6 +25,11 @@ class HomeScreen extends ConsumerWidget {
           titulo: 'Barra Progreso',
           page: CircularProgressScreen.route,
         ),
+        _Route(
+          icon: FontAwesomeIcons.pinterest,
+          titulo: 'Pinterest Grid',
+          page: PinterestScreen.route,
+        ),
       ];
 
   @override

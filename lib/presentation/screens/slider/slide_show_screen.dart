@@ -9,7 +9,6 @@ class SlideShowScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final isLarge = MediaQuery.of(context).size.height > 500;
-
     return Scaffold(
       appBar: AppBar(title: const Text('Slides'), centerTitle: true),
       body: Flex(
