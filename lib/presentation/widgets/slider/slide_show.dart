@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
 
 class SlideShow extends StatefulWidget {
-  const SlideShow({super.key, required this.children});
+  const SlideShow({
+    super.key,
+    required this.children,
+    this.direction = VerticalDirection.down,
+  });
   final List<Widget> children;
+  final VerticalDirection direction;
 
   @override
   State<SlideShow> createState() => _SlideShowState();
@@ -18,7 +23,9 @@ class _SlideShowState extends State<SlideShow> {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return Flex(
+      direction: Axis.vertical,
+      verticalDirection: widget.direction,
       children: <Widget>[
         SizedBox(
           width: double.infinity,

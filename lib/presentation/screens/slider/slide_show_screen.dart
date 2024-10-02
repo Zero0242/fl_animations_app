@@ -27,7 +27,8 @@ class SlideShowScreen extends StatelessWidget {
             ),
           ),
           Expanded(
-            child: SlideShow(
+            child: SlideShowRef(
+              direction: VerticalDirection.up,
               children: <Widget>[
                 _Slide('assets/svg/slide-1.svg'),
                 _Slide('assets/svg/slide-2.svg'),
