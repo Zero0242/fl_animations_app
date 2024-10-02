@@ -3,7 +3,6 @@
 /// De esta forma las pantallas se llaman desde este archivo
 library;
 
-export 'auth/login_screen.dart';
-export 'auth/register_screen.dart';
 export 'demo/demo_screen.dart';
+export 'emergency/emergency_screen.dart';
 export 'home/home_screen.dart';

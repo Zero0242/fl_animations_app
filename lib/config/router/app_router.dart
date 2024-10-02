@@ -14,12 +14,8 @@ final goRouterProvider = Provider<GoRouter>((ref) {
         builder: (context, state) => const HomeScreen(),
       ),
       GoRoute(
-        path: LoginScreen.route,
-        builder: (context, state) => const LoginScreen(),
-      ),
-      GoRoute(
-        path: RegisterScreen.route,
-        builder: (context, state) => const RegisterScreen(),
+        path: EmergencyScreen.route,
+        builder: (context, state) => const EmergencyScreen(),
       ),
       GoRoute(
         path: DemoScreen.route,
