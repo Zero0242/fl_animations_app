@@ -4,6 +4,7 @@
 library;
 
 export 'animated/radial_progress.dart';
+export 'buttons/floating_action_menu.dart';
 export 'buttons/thick_button.dart';
 export 'icons/icon_header.dart';
 export 'slider/slide_show.dart';
