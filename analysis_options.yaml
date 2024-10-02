@@ -15,3 +15,6 @@ linter:
     prefer_interpolation_to_compose_strings: true
     sort_constructors_first: true
     use_build_context_synchronously: false
+analyzer:
+  plugins:
+    - custom_lint
