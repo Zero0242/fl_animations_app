@@ -6,6 +6,7 @@ import '../../presentation/screens/screens.dart';
 
 final goRouterProvider = Provider<GoRouter>((ref) {
   return GoRouter(
+    initialLocation: HomeScreen.route,
     debugLogDiagnostics: kDebugMode,
     routes: [
       GoRoute(
