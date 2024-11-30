@@ -45,6 +45,11 @@ class HomeScreen extends ConsumerWidget {
           titulo: 'Imagenes',
           page: ImageColorsScreen.route,
         ),
+        _Route(
+          icon: FontAwesomeIcons.compass,
+          titulo: 'Brujula',
+          page: CompassScreen.route,
+        ),
       ];
 
   @override

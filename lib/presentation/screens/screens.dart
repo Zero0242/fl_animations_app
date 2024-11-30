@@ -4,6 +4,7 @@
 library;
 
 export 'animation/animation_screen.dart';
+export 'compass/compass_screen.dart';
 export 'demo/demo_screen.dart';
 export 'emergency/emergency_screen.dart';
 export 'headers/headers_home_screen.dart';

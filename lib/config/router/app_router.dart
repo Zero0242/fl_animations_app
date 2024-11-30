@@ -46,6 +46,10 @@ final goRouterProvider = Provider<GoRouter>((ref) {
         builder: (context, state) => const ImageColorsScreen(),
       ),
       GoRoute(
+        path: CompassScreen.route,
+        builder: (context, state) => const CompassScreen(),
+      ),
+      GoRoute(
         path: PokemonDetailScreen.route,
         builder: (context, state) {
           int id = int.tryParse(state.pathParameters['id'] ?? '0') ?? 0;
