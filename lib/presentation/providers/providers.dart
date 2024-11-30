@@ -4,5 +4,6 @@
 library;
 
 export 'compass/compass_provider.dart';
+export 'permissions/permissions_provider.dart';
 export 'pinterest/pokemon_provider.dart';
 export 'theme/theme_provider.dart';

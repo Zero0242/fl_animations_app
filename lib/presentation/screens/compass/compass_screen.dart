@@ -1,6 +1,7 @@
 import 'dart:math' as math;
 
 import 'package:fl_animaciones/presentation/providers/providers.dart';
+import 'package:fl_animaciones/presentation/views/views.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -10,7 +11,9 @@ class CompassScreen extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, ref) {
+    final locationGranted = ref.watch(permissionsProvider).locationGranted;
     final compassHeadings = ref.watch(compassProvider);
+    if (!locationGranted) return const LocationPermisionView();
 
     return Scaffold(
       backgroundColor: Colors.black,

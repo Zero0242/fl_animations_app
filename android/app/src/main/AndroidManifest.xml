@@ -1,8 +1,22 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <!-- Permissions options for the `internet` group -->
     <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- Permissions options for the `storage` group -->
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
+    <!-- Permissions options for the `camera` group -->
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <!-- Permissions options for the `location` group -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <!-- Permissions options for the `sensors` group -->
+    <uses-permission android:name="android.permission.BODY_SENSORS" />
+    <!-- Permissions options for the `biometrics` group -->
+    <uses-permission android:name="android.permission.USE_BIOMETRIC"/>
+    <!-- Permissions options for the `vibration` group -->
+    <uses-permission android:name="android.permission.VIBRATE"/>
 
     <application
         android:label="Curso Animaciones"
