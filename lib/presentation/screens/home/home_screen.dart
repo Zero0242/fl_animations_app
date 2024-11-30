@@ -40,6 +40,11 @@ class HomeScreen extends ConsumerWidget {
           titulo: 'Pinterest Grid',
           page: PinterestScreen.route,
         ),
+        _Route(
+          icon: FontAwesomeIcons.photoFilm,
+          titulo: 'Imagenes',
+          page: ImageColorsScreen.route,
+        ),
       ];
 
   @override

@@ -4,5 +4,6 @@
 library;
 
 export 'constants/storage_constants.dart';
+export 'helpers/dominant_colors.dart';
 export 'router/app_router.dart';
 export 'theme/app_theme.dart';
