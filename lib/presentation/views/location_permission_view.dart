@@ -8,9 +8,7 @@ class LocationPermisionView extends ConsumerWidget {
   @override
   Widget build(BuildContext context, ref) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Permiso Requerido'),
-      ),
+      appBar: AppBar(title: const Text('Permiso Requerido')),
       body: Center(
         child: FilledButton(
           child: const Text('Localización Necesaria'),

@@ -46,6 +46,11 @@ class HomeScreen extends ConsumerWidget {
           page: ImageColorsScreen.route,
         ),
         _Route(
+          icon: FontAwesomeIcons.mapLocation,
+          titulo: 'Mapa',
+          page: MapScreen.route,
+        ),
+        _Route(
           icon: FontAwesomeIcons.compass,
           titulo: 'Brujula',
           page: CompassScreen.route,
