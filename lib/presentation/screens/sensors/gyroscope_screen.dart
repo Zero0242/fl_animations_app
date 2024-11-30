@@ -8,11 +8,11 @@ class GyroscopeScreen extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final gyroscope = ref.watch(gyroscopeProvider);
+    final gyroscope$ = ref.watch(gyroscopeProvider);
     return Scaffold(
       appBar: AppBar(title: const Text('Gyroscope')),
       body: Center(
-        child: gyroscope.when(
+        child: gyroscope$.when(
           data: (data) => Text(data.toString()),
           error: (error, stackTrace) => Text('Error: $error'),
           loading: () => const CircularProgressIndicator(),

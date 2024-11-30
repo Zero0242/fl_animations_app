@@ -5,6 +5,8 @@ library;
 
 export 'permissions/permissions_provider.dart';
 export 'pinterest/pokemon_provider.dart';
+export 'sensors/acelerometer_provider.dart';
 export 'sensors/compass_provider.dart';
 export 'sensors/gyroscope_provider.dart';
+export 'sensors/magnetometer_provider.dart';
 export 'theme/theme_provider.dart';

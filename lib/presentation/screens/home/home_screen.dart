@@ -55,6 +55,21 @@ class HomeScreen extends ConsumerWidget {
           titulo: 'Giroscopio',
           page: GyroscopeScreen.route,
         ),
+        _Route(
+          icon: FontAwesomeIcons.carOn,
+          titulo: 'Acelerometro',
+          page: AccelerometerScreen.route,
+        ),
+        _Route(
+          icon: FontAwesomeIcons.magnet,
+          titulo: 'Magnetometro',
+          page: MagnetometerScreen.route,
+        ),
+        _Route(
+          icon: FontAwesomeIcons.baseball,
+          titulo: 'Bolas',
+          page: GyroscopeBallScreen.route,
+        ),
       ];
 
   @override

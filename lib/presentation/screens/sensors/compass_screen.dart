@@ -12,7 +12,7 @@ class CompassScreen extends ConsumerWidget {
   @override
   Widget build(BuildContext context, ref) {
     final locationGranted = ref.watch(permissionsProvider).locationGranted;
-    final compassHeadings = ref.watch(compassProvider);
+    final compassHeadings$ = ref.watch(compassProvider);
     if (!locationGranted) return const LocationPermisionView();
 
     return Scaffold(
@@ -23,7 +23,7 @@ class CompassScreen extends ConsumerWidget {
         title: const Text('Compass', style: TextStyle(color: Colors.white)),
       ),
       body: Center(
-        child: compassHeadings.when(
+        child: compassHeadings$.when(
           data: (data) => CompassComponent(heading: data ?? 0),
           error: (err, stack) =>
               Text('$err', style: const TextStyle(color: Colors.white)),
