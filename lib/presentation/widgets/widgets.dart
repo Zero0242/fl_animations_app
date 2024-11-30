@@ -3,6 +3,7 @@
 /// De esta forma los widgets se llaman desde este archivo
 library;
 
+export 'animated/circular_animation.dart';
 export 'animated/radial_progress.dart';
 export 'buttons/floating_action_menu.dart';
 export 'buttons/thick_button.dart';

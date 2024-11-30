@@ -16,6 +16,11 @@ class HomeScreen extends ConsumerWidget {
           page: HeadersHomeScreen.route,
         ),
         _Route(
+          icon: FontAwesomeIcons.buffer,
+          titulo: 'Animaciones',
+          page: AnimationScreen.route,
+        ),
+        _Route(
           icon: FontAwesomeIcons.slideshare,
           titulo: 'SlideShow',
           page: SlideShowScreen.route,

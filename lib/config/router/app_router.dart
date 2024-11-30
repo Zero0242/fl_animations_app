@@ -38,6 +38,10 @@ final goRouterProvider = Provider<GoRouter>((ref) {
         builder: (context, state) => const HeadersHomeScreen(),
       ),
       GoRoute(
+        path: AnimationScreen.route,
+        builder: (context, state) => const AnimationScreen(),
+      ),
+      GoRoute(
         path: PokemonDetailScreen.route,
         builder: (context, state) {
           int id = int.tryParse(state.pathParameters['id'] ?? '0') ?? 0;
