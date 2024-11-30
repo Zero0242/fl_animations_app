@@ -1,5 +1,7 @@
+import 'package:fl_animaciones/config/config.dart';
 import 'package:fl_animaciones/presentation/providers/providers.dart';
 import 'package:fl_animaciones/presentation/screens/screens.dart';
+import 'package:fl_animaciones/presentation/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -90,6 +92,17 @@ class HomeScreen extends ConsumerWidget {
             },
             icon: Icon(isDarkMode ? Icons.light_mode : Icons.dark_mode),
           ),
+          IconButton(
+            onPressed: () async {
+              final (res, error) = await LocalAuthPlugin.authenticate();
+              AwesomeToast.message(
+                context: context,
+                text: res ? 'Autorización exitosa' : error,
+                type: res ? ToastType.success : ToastType.error,
+              );
+            },
+            icon: const Icon(Icons.security),
+          ),
         ],
       ),
       body: ListView.separated(
@@ -102,7 +115,7 @@ class HomeScreen extends ConsumerWidget {
             leading: FaIcon(config.icon),
             title: Text(config.titulo),
             trailing: const FaIcon(FontAwesomeIcons.chevronRight),
-            onTap: () {
+            onTap: () async {
               context.push(config.page);
             },
           );
