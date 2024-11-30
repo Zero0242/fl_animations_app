@@ -99,7 +99,7 @@ class HomeScreen extends ConsumerWidget {
                 context: context,
                 text: res ? 'Autorización exitosa' : error,
                 type: res ? ToastType.success : ToastType.error,
-              );
+              ).show();
             },
             icon: const Icon(Icons.security),
           ),

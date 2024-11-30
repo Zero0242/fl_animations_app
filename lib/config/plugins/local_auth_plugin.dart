@@ -27,7 +27,6 @@ class LocalAuthPlugin {
   static Future<(bool, String)> authenticate({
     bool bioMetricOnly = false,
   }) async {
-    avaliableBiometrics();
     try {
       final bool didAuthenticate = await auth.authenticate(
         localizedReason: 'Para continuar, realice la autenticación',

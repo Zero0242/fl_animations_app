@@ -13,8 +13,6 @@
 
     <!-- Permissions options for the `sensors` group -->
     <uses-permission android:name="android.permission.BODY_SENSORS" />
-    <!-- Permissions options for the `biometrics` group -->
-    <uses-permission android:name="android.permission.USE_BIOMETRIC"/>
     <!-- Permissions options for the `vibration` group -->
     <uses-permission android:name="android.permission.VIBRATE"/>
     <!-- Permissions options for the `biometrics` group -->
