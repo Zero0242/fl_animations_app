@@ -95,6 +95,10 @@ class RoundedHeaderPainter extends CustomPainter {
 }
 
 class WaveHeaderPainter extends CustomPainter {
+  WaveHeaderPainter({this.gradient}) : super();
+
+  final Gradient? gradient;
+
   @override
   void paint(Canvas canvas, Size size) {
     final path = Path()
@@ -117,6 +121,12 @@ class WaveHeaderPainter extends CustomPainter {
       ..color = Colors.green
       // ..style = PaintingStyle.stroke
       ..strokeWidth = 12;
+
+    if (gradient != null) {
+      final rect = Offset.zero & size;
+      paint.shader = gradient!.createShader(rect);
+    }
+
     canvas.drawPath(path, paint);
   }
 

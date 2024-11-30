@@ -31,6 +31,18 @@ class HeadersHomeScreen extends StatelessWidget {
             title: 'Header Waves',
             customPainter: WaveHeaderPainter(),
           ),
+          HeaderDisplayContainer(
+            title: 'Gradient Waves',
+            customPainter: WaveHeaderPainter(
+              gradient: const LinearGradient(
+                colors: [
+                  Color(0xff40E0D0),
+                  Color(0xffFF8C00),
+                  Color(0xffFF0080),
+                ],
+              ),
+            ),
+          ),
         ],
       ),
     );
