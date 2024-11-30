@@ -3,7 +3,8 @@
 /// De esta forma los controladores se llaman desde aca
 library;
 
-export 'compass/compass_provider.dart';
 export 'permissions/permissions_provider.dart';
 export 'pinterest/pokemon_provider.dart';
+export 'sensors/compass_provider.dart';
+export 'sensors/gyroscope_provider.dart';
 export 'theme/theme_provider.dart';

@@ -4,7 +4,6 @@
 library;
 
 export 'animation/animation_screen.dart';
-export 'compass/compass_screen.dart';
 export 'demo/demo_screen.dart';
 export 'emergency/emergency_screen.dart';
 export 'headers/headers_home_screen.dart';
@@ -13,4 +12,6 @@ export 'image/image_colors_screen.dart';
 export 'pinterest/pinterest_screen.dart';
 export 'pinterest/pokemon_detail_screen.dart';
 export 'progress/circular_progress_screen.dart';
+export 'sensors/compass_screen.dart';
+export 'sensors/gyroscope_screen.dart';
 export 'slider/slide_show_screen.dart';

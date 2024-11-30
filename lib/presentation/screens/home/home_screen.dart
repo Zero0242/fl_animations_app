@@ -50,6 +50,11 @@ class HomeScreen extends ConsumerWidget {
           titulo: 'Brujula',
           page: CompassScreen.route,
         ),
+        _Route(
+          icon: FontAwesomeIcons.rotate,
+          titulo: 'Giroscopio',
+          page: GyroscopeScreen.route,
+        ),
       ];
 
   @override
