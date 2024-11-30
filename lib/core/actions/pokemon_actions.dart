@@ -1,13 +1,11 @@
-import 'package:dio/dio.dart';
-
 import '../models/models.dart';
 
-class PokemonService {
-  static final Dio _dio = Dio(
-    BaseOptions(
-      baseUrl: 'https://pokeapi.co/api/v2',
-    ),
-  );
+class PokemonActions {
+  // static final Dio _dio = Dio(
+  //   BaseOptions(
+  //     baseUrl: 'https://pokeapi.co/api/v2',
+  //   ),
+  // );
 
   static Future<Pokemon> getPokemonById(int id) async {
     // final resp = await _dio.get('/pokemon/$id');

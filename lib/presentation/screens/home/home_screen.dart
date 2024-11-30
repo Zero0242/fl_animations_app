@@ -11,6 +11,11 @@ class HomeScreen extends ConsumerWidget {
 
   List<_Route> get _pages => [
         _Route(
+          icon: FontAwesomeIcons.paintRoller,
+          titulo: 'Headers',
+          page: HeadersHomeScreen.route,
+        ),
+        _Route(
           icon: FontAwesomeIcons.slideshare,
           titulo: 'SlideShow',
           page: SlideShowScreen.route,

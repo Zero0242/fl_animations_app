@@ -5,6 +5,7 @@ library;
 
 export 'demo/demo_screen.dart';
 export 'emergency/emergency_screen.dart';
+export 'headers/headers_home_screen.dart';
 export 'home/home_screen.dart';
 export 'pinterest/pinterest_screen.dart';
 export 'pinterest/pokemon_detail_screen.dart';
