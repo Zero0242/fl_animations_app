@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:fl_animaciones/presentation/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
@@ -122,10 +123,12 @@ class _TileElement extends StatelessWidget {
           context.push('${PinterestScreen.route}/${index + 1}');
         },
         child: CircleAvatar(
-          child: FadeInImage(
-            placeholder: const AssetImage('assets/images/loading.gif'),
-            image: NetworkImage(imageUrl),
-            imageErrorBuilder: (context, error, stackTrace) {
+          child: CachedNetworkImage(
+            imageUrl: imageUrl,
+            placeholder: (context, url) {
+              return const Center(child: CircularProgressIndicator());
+            },
+            errorWidget: (context, error, stackTrace) {
               return Image.asset('assets/images/no-image.jpg');
             },
           ),
