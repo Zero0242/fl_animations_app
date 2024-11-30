@@ -1,0 +1,14 @@
+package_rename_config:
+  android:
+    app_name: Curso Animaciones
+    package_name: com.pedrocorrea.animacionesapp
+
+  ios:
+    app_name: Curso Animaciones
+    bundle_name: com.pedrocorrea.animacionesapp
+    package_name: com.pedrocorrea.animacionesapp
+
+  web:
+    app_name: Curso Animaciones
+    short_app_name: Curso Animaciones
+    description: Animaciones en una app
