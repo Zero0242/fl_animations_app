@@ -72,6 +72,12 @@ final goRouterProvider = Provider<GoRouter>((ref) {
       GoRoute(
         path: ShoesScreen.route,
         builder: (context, state) => const ShoesScreen(),
+        routes: <RouteBase>[
+          GoRoute(
+            path: ShoesDetailsScreen.partial,
+            builder: (context, state) => const ShoesDetailsScreen(),
+          ),
+        ],
       ),
       GoRoute(
         path: PokemonDetailScreen.route,

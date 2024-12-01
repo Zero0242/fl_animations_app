@@ -2,6 +2,7 @@ import 'package:fl_animaciones/presentation/providers/providers.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+/// La imagen del zapato
 class ShoePreview extends ConsumerWidget {
   const ShoePreview({
     super.key,
@@ -9,6 +10,11 @@ class ShoePreview extends ConsumerWidget {
     this.margin = const EdgeInsetsDirectional.symmetric(horizontal: 10),
     this.onTap,
   });
+
+  factory ShoePreview.fullScreen() {
+    return const ShoePreview(showSizes: false, margin: EdgeInsets.zero);
+  }
+
   final EdgeInsetsGeometry margin;
   final bool showSizes;
   final VoidCallback? onTap;
