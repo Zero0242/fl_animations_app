@@ -1,12 +1,24 @@
 import 'package:animate_do/animate_do.dart';
+import 'package:fl_animaciones/config/config.dart';
 import 'package:fl_animaciones/presentation/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-class ShoesDetailsScreen extends StatelessWidget {
+class ShoesDetailsScreen extends StatefulWidget {
   const ShoesDetailsScreen({super.key});
   static const String route = '/shoes/details';
   static const String partial = 'details';
+
+  @override
+  State<ShoesDetailsScreen> createState() => _ShoesDetailsScreenState();
+}
+
+class _ShoesDetailsScreenState extends State<ShoesDetailsScreen> {
+  @override
+  void dispose() {
+    StatusBarUtils.setDark();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
