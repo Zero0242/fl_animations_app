@@ -19,7 +19,7 @@ class ShoeStoreNotifier extends StateNotifier<ShoeStoreState> {
 
 class ShoeStoreState {
   ShoeStoreState({
-    this.asset = 'assets/images/azul.png',
+    this.asset = 'assets/shoes/azul.png',
     this.talla = 9.0,
   });
 

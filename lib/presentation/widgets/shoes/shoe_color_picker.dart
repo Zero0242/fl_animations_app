@@ -15,10 +15,10 @@ class ShoeColorPicker extends StatelessWidget {
       padding: EdgeInsets.symmetric(horizontal: 10),
       child: Row(
         children: <Widget>[
-          _BotonColor(Color(0xff364d56), 1, 'assets/images/amarillo.png'),
-          _BotonColor(Color(0xff2099f1), 2, 'assets/images/azul.png'),
-          _BotonColor(Color(0xffffad29), 3, 'assets/images/verde.png'),
-          _BotonColor(Color(0xff364d56), 4, 'assets/images/negro.png'),
+          _BotonColor(Color(0xff364d56), 1, 'assets/shoes/amarillo.png'),
+          _BotonColor(Color(0xff2099f1), 2, 'assets/shoes/azul.png'),
+          _BotonColor(Color(0xffffad29), 3, 'assets/shoes/verde.png'),
+          _BotonColor(Color(0xff364d56), 4, 'assets/shoes/negro.png'),
           Spacer(),
           ShoeButton(
             text: 'More related items',
