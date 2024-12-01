@@ -77,6 +77,11 @@ class HomeScreen extends ConsumerWidget {
           titulo: 'Bolas',
           page: GyroscopeBallScreen.route,
         ),
+        _Route(
+          icon: FontAwesomeIcons.shoePrints,
+          titulo: 'Zapatos',
+          page: ShoesScreen.route,
+        ),
       ];
 
   @override
