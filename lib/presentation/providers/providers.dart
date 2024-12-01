@@ -3,6 +3,7 @@
 /// De esta forma los controladores se llaman desde aca
 library;
 
+export 'music/music_provider.dart';
 export 'permissions/permissions_provider.dart';
 export 'pinterest/pokemon_provider.dart';
 export 'sensors/acelerometer_provider.dart';

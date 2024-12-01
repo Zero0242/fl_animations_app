@@ -66,6 +66,10 @@ final goRouterProvider = Provider<GoRouter>((ref) {
         builder: (context, state) => const MapScreen(),
       ),
       GoRoute(
+        path: MusicScreen.route,
+        builder: (context, state) => const MusicScreen(),
+      ),
+      GoRoute(
         path: GyroscopeBallScreen.route,
         builder: (context, state) => const GyroscopeBallScreen(),
       ),

@@ -82,6 +82,11 @@ class HomeScreen extends ConsumerWidget {
           titulo: 'Zapatos',
           page: ShoesScreen.route,
         ),
+        _Route(
+          icon: FontAwesomeIcons.music,
+          titulo: 'Musica',
+          page: MusicScreen.route,
+        ),
       ];
 
   @override

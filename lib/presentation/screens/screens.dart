@@ -10,6 +10,7 @@ export 'headers/headers_home_screen.dart';
 export 'home/home_screen.dart';
 export 'image/image_colors_screen.dart';
 export 'map/map_screen.dart';
+export 'music/music_screen.dart';
 export 'pinterest/pinterest_screen.dart';
 export 'pinterest/pokemon_detail_screen.dart';
 export 'progress/circular_progress_screen.dart';
