@@ -14,6 +14,7 @@ export 'icons/icon_header.dart';
 export 'shoes/cart_button.dart';
 export 'shoes/shoe_app_bar.dart';
 export 'shoes/shoe_button.dart';
+export 'shoes/shoe_preview.dart';
 export 'shoes/shoes_description.dart';
 export 'slider/slide_show.dart';
 export 'slider/slide_show_ref.dart';
