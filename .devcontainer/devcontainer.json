@@ -1,0 +1,20 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/docker-existing-docker-compose
+{
+  "name": "Existing Docker Compose (Extend)",
+
+  "dockerComposeFile": ["../docker-compose.yaml", "docker-compose.yml"],
+
+  "service": "flutter_machine",
+
+  "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "Dart-Code.dart-code",
+        "Dart-Code.flutter",
+        "Nash.awesome-flutter-snippets"
+      ]
+    }
+  }
+}

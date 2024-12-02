@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  flutter_machine:
+    container_name: flutter_machine
+    image: ghcr.io/cirruslabs/flutter:3.24.5
+    ports:
+      - "5047:9000"
+      - "6032:8000"
+    volumes:
+      - flutter_cache:/root/.pub-cache
+      - flutter_cache:/root/.gradle
+
+volumes:
+  flutter_cache:
+    external: false
