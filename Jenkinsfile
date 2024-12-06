@@ -13,7 +13,12 @@ pipeline {
         }
         stage('Flutter Pub Get') {
             steps {
-                sh 'flutter pub get'
+                sh '''
+                pwd
+                ls -la
+                echo "Mensajes de Debug"
+                flutter pub get
+                '''
             }
         }
         stage('Build APK') {
