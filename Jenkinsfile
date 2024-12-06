@@ -2,6 +2,7 @@ pipeline {
     agent {
         docker {
             image 'ghcr.io/cirruslabs/flutter:3.24.5'
+            args '-u root:root'
         }
     }
     stages {
