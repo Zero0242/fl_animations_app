@@ -6,11 +6,6 @@ pipeline {
         }
     }
     stages {
-        stage('Checkout') {
-            steps {
-                checkout scm
-            }
-        }
         stage('Flutter Pub Get') {
             steps {
                 sh '''
@@ -23,13 +18,14 @@ pipeline {
         }
         stage('Build APK') {
             steps {
-                sh 'flutter build apk --release'
+                sh 'flutter build apk --release -v'
             }
         }
     }
     post {
         always {
             archiveArtifacts artifacts: 'build/app/outputs/flutter-apk/app-release.apk', allowEmptyArchive: true
+            sh 'flutter clean'
         }
     }
 }
