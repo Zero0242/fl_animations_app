@@ -54,6 +54,10 @@ final goRouterProvider = Provider<GoRouter>((ref) {
         builder: (context, state) => const GyroscopeScreen(),
       ),
       GoRoute(
+        path: TiltImageScreen.route,
+        builder: (context, state) => const TiltImageScreen(),
+      ),
+      GoRoute(
         path: AccelerometerScreen.route,
         builder: (context, state) => const AccelerometerScreen(),
       ),

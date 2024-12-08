@@ -37,7 +37,7 @@ class MovinBall extends StatelessWidget {
     final currentXPos = (x * 100);
     return Stack(
       alignment: Alignment.center,
-      children: [
+      children: <Widget>[
         AnimatedPositioned(
           left: (currentYPos - 25) + (width / 2),
           top: (currentXPos - 25) + (height / 2),

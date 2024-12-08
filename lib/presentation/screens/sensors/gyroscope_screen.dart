@@ -13,7 +13,7 @@ class GyroscopeScreen extends ConsumerWidget {
       appBar: AppBar(title: const Text('Gyroscope')),
       body: Center(
         child: gyroscope$.when(
-          data: (data) => Text(data.toString()),
+          data: (data) => Text(data.describe),
           error: (error, stackTrace) => Text('Error: $error'),
           loading: () => const CircularProgressIndicator(),
         ),

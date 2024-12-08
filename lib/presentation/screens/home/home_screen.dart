@@ -78,6 +78,11 @@ class HomeScreen extends ConsumerWidget {
           page: GyroscopeBallScreen.route,
         ),
         _Route(
+          icon: FontAwesomeIcons.imagePortrait,
+          titulo: 'Tilt Imagen',
+          page: TiltImageScreen.route,
+        ),
+        _Route(
           icon: FontAwesomeIcons.skull,
           titulo: 'Esqueleto',
           page: SkeletonScreen.route,

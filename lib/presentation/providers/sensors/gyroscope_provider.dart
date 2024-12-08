@@ -16,4 +16,8 @@ class GyroscopetXYZ {
   final double x;
   final double y;
   final double z;
+
+  String get describe {
+    return "X: $x, Y: $y, Z: $z";
+  }
 }
