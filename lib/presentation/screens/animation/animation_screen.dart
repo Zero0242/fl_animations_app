@@ -12,11 +12,18 @@ class AnimationScreen extends StatelessWidget {
       body: const Center(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
+          children: <Widget>[
             CircularAnimation(),
             CircularAnimation(delay: Duration(milliseconds: 500)),
-            CircularAnimation(delay: Duration(milliseconds: 1000)),
-            CircularAnimation(delay: Duration(milliseconds: 1500)),
+            ShakeTransition(
+              offset: -1000,
+              axis: Axis.vertical,
+              child: CircularAnimation(delay: Duration(milliseconds: 1000)),
+            ),
+            ShakeTransition(
+              offset: 1000,
+              child: CircularAnimation(delay: Duration(milliseconds: 1500)),
+            ),
           ],
         ),
       ),
