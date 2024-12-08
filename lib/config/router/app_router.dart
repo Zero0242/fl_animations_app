@@ -46,6 +46,10 @@ final goRouterProvider = Provider<GoRouter>((ref) {
         builder: (context, state) => const ImageColorsScreen(),
       ),
       GoRoute(
+        path: SensorsHome.route,
+        builder: (context, state) => const SensorsHome(),
+      ),
+      GoRoute(
         path: CompassScreen.route,
         builder: (context, state) => const CompassScreen(),
       ),

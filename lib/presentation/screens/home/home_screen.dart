@@ -53,34 +53,9 @@ class HomeScreen extends ConsumerWidget {
           page: MapScreen.route,
         ),
         _Route(
-          icon: FontAwesomeIcons.compass,
-          titulo: 'Brujula',
-          page: CompassScreen.route,
-        ),
-        _Route(
-          icon: FontAwesomeIcons.rotate,
-          titulo: 'Giroscopio',
-          page: GyroscopeScreen.route,
-        ),
-        _Route(
-          icon: FontAwesomeIcons.carOn,
-          titulo: 'Acelerometro',
-          page: AccelerometerScreen.route,
-        ),
-        _Route(
-          icon: FontAwesomeIcons.magnet,
-          titulo: 'Magnetometro',
-          page: MagnetometerScreen.route,
-        ),
-        _Route(
-          icon: FontAwesomeIcons.baseball,
-          titulo: 'Bolas',
-          page: GyroscopeBallScreen.route,
-        ),
-        _Route(
-          icon: FontAwesomeIcons.imagePortrait,
-          titulo: 'Tilt Imagen',
-          page: TiltImageScreen.route,
+          icon: FontAwesomeIcons.mobileRetro,
+          titulo: 'Sensores',
+          page: SensorsHome.route,
         ),
         _Route(
           icon: FontAwesomeIcons.skull,

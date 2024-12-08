@@ -19,6 +19,7 @@ export 'sensors/ball_screen.dart';
 export 'sensors/compass_screen.dart';
 export 'sensors/gyroscope_screen.dart';
 export 'sensors/magnetometer_screen.dart';
+export 'sensors/sensors_home.dart';
 export 'sensors/tilt_image_screen.dart';
 export 'shoes/shoes_details_screen.dart';
 export 'shoes/shoes_screen.dart';
