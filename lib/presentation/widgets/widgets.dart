@@ -7,6 +7,7 @@ export 'animated/awesome_toast.dart';
 export 'animated/circular_animation.dart';
 export 'animated/radial_progress.dart';
 export 'animated/shake_transition.dart';
+export 'buttons/animated_gradient_button.dart';
 export 'buttons/floating_action_menu.dart';
 export 'buttons/thick_button.dart';
 export 'headers/header_display_container.dart';
