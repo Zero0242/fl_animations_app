@@ -8,9 +8,11 @@ services:
       - "5047:9000"
       - "6032:8000"
     volumes:
-      - flutter_cache:/root/.pub-cache
-      - flutter_cache:/root/.gradle
+      - pub_cache:/root/.pub-cache
+      - android_cache:/root/.gradle
 
 volumes:
-  flutter_cache:
+  pub_cache:
+    external: false
+  android_cache:
     external: false
