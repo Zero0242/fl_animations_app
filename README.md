@@ -5,7 +5,7 @@
 
 # Proyecto Animaciones
 
-Port del curso de animaciones de Flutter
+Port del curso de animaciones de Flutter, link de [Udemy](https://www.udemy.com/course/flutter-disenos-y-animaciones)
 
 > Creado en Flutter
 
