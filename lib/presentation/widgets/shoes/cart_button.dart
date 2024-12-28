@@ -13,7 +13,7 @@ class CartButton extends StatelessWidget {
       margin: const EdgeInsets.all(10),
       height: 100,
       decoration: BoxDecoration(
-        color: Colors.grey.withOpacity(0.15),
+        color: Colors.grey.withValues(alpha: 0.15),
         borderRadius: BorderRadius.circular(100),
       ),
       child: Row(

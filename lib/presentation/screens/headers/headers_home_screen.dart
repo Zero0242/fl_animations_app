@@ -56,7 +56,7 @@ class HeadersHomeScreen extends StatelessWidget {
 }
 
 class _ExperimentHeader extends StatefulWidget {
-  const _ExperimentHeader({super.key});
+  const _ExperimentHeader();
 
   @override
   State<_ExperimentHeader> createState() => _ExperimentHeaderState();

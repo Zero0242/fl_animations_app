@@ -13,7 +13,7 @@ class MusicProgress extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final style = TextStyle(color: Colors.white.withOpacity(0.4));
+    final style = TextStyle(color: Colors.white.withValues(alpha: 0.4));
 
     return Column(
       children: <Widget>[
@@ -23,14 +23,14 @@ class MusicProgress extends StatelessWidget {
             Container(
               width: 3,
               height: 230,
-              color: Colors.white.withOpacity(0.1),
+              color: Colors.white.withValues(alpha: 0.1),
             ),
             Positioned(
               bottom: 0,
               child: Container(
                 width: 3,
                 height: 230 * progress,
-                color: Colors.white.withOpacity(0.8),
+                color: Colors.white.withValues(alpha: 0.8),
               ),
             ),
           ],

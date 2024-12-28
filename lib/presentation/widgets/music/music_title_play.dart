@@ -45,7 +45,6 @@ class _MusicTitlePlayState extends ConsumerState<MusicTitlePlay>
     notifier.updateTotal(duration!);
     // Listeners
     assetAudioPlayer.onPositionChanged.listen((data) {
-      print('Escuchando duración');
       notifier.updateDuration(data);
     });
   }
@@ -63,14 +62,14 @@ class _MusicTitlePlayState extends ConsumerState<MusicTitlePlay>
                 'Far away',
                 style: TextStyle(
                   fontSize: 30,
-                  color: Colors.white.withOpacity(0.8),
+                  color: Colors.white.withValues(alpha: 0.8),
                 ),
               ),
               Text(
                 '-Breaking Benjamin-',
                 style: TextStyle(
                   fontSize: 15,
-                  color: Colors.white.withOpacity(0.5),
+                  color: Colors.white.withValues(alpha: 0.5),
                 ),
               ),
             ],

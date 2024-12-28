@@ -28,7 +28,7 @@ class MapScreen extends ConsumerWidget {
                 .read(mapControllerProvider)
                 .move(LatLng(location.latitude, location.longitude), 15);
           } catch (e) {
-            print('Error $e');
+            debugPrint('Error $e');
           }
         },
       ),

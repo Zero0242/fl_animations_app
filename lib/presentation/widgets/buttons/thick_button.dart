@@ -61,7 +61,7 @@ class _ThickButtonBackground extends StatelessWidget {
         gradient: LinearGradient(colors: colors),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.2),
+            color: Colors.black.withValues(alpha: 0.2),
             offset: const Offset(4, 6),
             blurRadius: 10,
           ),
@@ -77,7 +77,7 @@ class _ThickButtonBackground extends StatelessWidget {
               child: FaIcon(
                 icon,
                 size: 150,
-                color: Colors.white.withOpacity(0.2),
+                color: Colors.white.withValues(alpha: 0.2),
               ),
             ),
           ],

@@ -56,10 +56,6 @@ Links de librerias utilizadas
 
 - [Flutter]("https://flutter.dev/")
 
-#### Jenkins
-
-El `Jenkinsfile` esta pensado para ser usado en un servidor que usa docker para correr tareas de construcción
-
 ## PROD
 
 Seguir la guia recomendada por [flutter](https://docs.flutter.dev/deployment/android) para un despliegue en tienda

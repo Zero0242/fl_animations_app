@@ -15,7 +15,7 @@ class MusicLyrics extends StatelessWidget {
               letra,
               style: TextStyle(
                 fontSize: 20,
-                color: Colors.white.withOpacity(0.6),
+                color: Colors.white.withValues(alpha: 0.6),
               ),
             ),
           )

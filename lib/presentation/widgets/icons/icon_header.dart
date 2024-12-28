@@ -25,7 +25,7 @@ class IconHeader extends StatelessWidget {
           child: FaIcon(
             icon,
             size: 250,
-            color: Colors.white.withOpacity(0.2),
+            color: Colors.white.withValues(alpha: 0.2),
           ),
         ),
         Column(
@@ -33,8 +33,10 @@ class IconHeader extends StatelessWidget {
             const SizedBox(height: 80, width: double.infinity),
             Text(
               title,
-              style:
-                  TextStyle(fontSize: 20, color: Colors.white.withOpacity(0.7)),
+              style: TextStyle(
+                fontSize: 20,
+                color: Colors.white.withValues(alpha: 0.7),
+              ),
             ),
             const SizedBox(height: 20),
             Text(
@@ -42,7 +44,7 @@ class IconHeader extends StatelessWidget {
               style: TextStyle(
                 fontWeight: FontWeight.bold,
                 fontSize: 20,
-                color: Colors.white.withOpacity(0.7),
+                color: Colors.white.withValues(alpha: 0.7),
               ),
             ),
             FaIcon(

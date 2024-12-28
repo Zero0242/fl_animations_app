@@ -98,14 +98,14 @@ class _ShoesDetailsScreenState extends State<ShoesDetailsScreen> {
                         _BotonPreferencia(
                           Icon(
                             Icons.add_shopping_cart,
-                            color: Colors.grey.withOpacity(0.7),
+                            color: Colors.grey.withValues(alpha: 0.7),
                             size: 25,
                           ),
                         ),
                         _BotonPreferencia(
                           Icon(
                             Icons.settings,
-                            color: Colors.grey.withOpacity(0.4),
+                            color: Colors.grey.withValues(alpha: 0.4),
                             size: 25,
                           ),
                         ),
