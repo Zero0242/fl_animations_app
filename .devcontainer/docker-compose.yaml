@@ -1,0 +1,21 @@
+version: '3.8'
+services:
+  devcontainer:
+    container_name: flutter_devcontainer
+    image: ghcr.io/cirruslabs/flutter:3.27.0
+    volumes:
+      - ..:/workspaces:cached
+      - pub_cache:/root/.pub-cache
+      - android_cache:/root/.gradle
+    command: sleep infinity
+    # Configuración de Ram permitida
+    deploy:
+      resources:
+        limits:
+          memory: 4g
+
+volumes:
+  pub_cache:
+    external: false
+  android_cache:
+    external: false
