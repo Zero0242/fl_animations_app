@@ -78,8 +78,8 @@ class HomeScreen extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final isDarkMode = ref.watch(themeProvider);
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Diseños en flutter'),
+      appBar: AnimatedAppBar(
+        title: const Text('Diseños en Flutter'),
         actions: <Widget>[
           IconButton(
             onPressed: () {

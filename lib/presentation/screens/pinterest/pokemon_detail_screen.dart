@@ -1,5 +1,7 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:fl_animaciones/presentation/providers/providers.dart';
 import 'package:fl_animaciones/presentation/screens/screens.dart';
+import 'package:fl_animaciones/presentation/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -13,18 +15,21 @@ class PokemonDetailScreen extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final pokeAsync = ref.watch(pokemonProvider(id));
     return Scaffold(
-      appBar: AppBar(title: const Text('Pokemon Detalles')),
+      appBar: const AnimatedAppBar(title: Text('Detalles')),
       body: Center(
         child: pokeAsync.when(
           data: (data) => Column(
             children: <Widget>[
-              Text('Pokemon ${data.name}'),
-              FadeInImage.assetNetwork(
-                placeholder: 'assets/images/loading.gif',
-                image: data.avatar,
-                height: 200,
-                width: 200,
-                fit: BoxFit.cover,
+              Text(data.name),
+              SlideOffset(
+                begin: const Offset(500, 0),
+                end: const Offset(0, 0),
+                child: HeartBeatAnimation(
+                  child: CachedNetworkImage(
+                    imageUrl: data.avatar,
+                    height: 200,
+                  ),
+                ),
               ),
             ],
           ),
@@ -40,7 +45,10 @@ class PokemonDetailScreen extends ConsumerWidget {
               ),
             ],
           ),
-          loading: () => const CircularProgressIndicator(),
+          loading: () => SkeletonContainer(
+            height: 200,
+            width: MediaQuery.of(context).size.width * 0.8,
+          ),
         ),
       ),
     );

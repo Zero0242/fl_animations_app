@@ -8,6 +8,7 @@ class PokemonActions {
   // );
 
   static Future<Pokemon> getPokemonById(int id) async {
+    await Future.delayed(const Duration(seconds: 1));
     // final resp = await _dio.get('/pokemon/$id');
     // final data = PokemonResponse.fromJson(resp.data);
     return Pokemon(
