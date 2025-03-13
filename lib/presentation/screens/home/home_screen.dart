@@ -72,6 +72,11 @@ class HomeScreen extends ConsumerWidget {
           titulo: 'Musica',
           page: MusicScreen.route,
         ),
+        _Route(
+          icon: FontAwesomeIcons.music,
+          titulo: 'Audio Waves',
+          page: AudioWavesScreen.route,
+        ),
       ];
 
   @override
