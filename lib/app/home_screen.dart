@@ -77,6 +77,11 @@ class HomeScreen extends ConsumerWidget {
       titulo: 'Audio Waves',
       page: AudioWavesScreen.route,
     ),
+    _Route(
+      icon: FontAwesomeIcons.imagePortrait,
+      titulo: 'Parallax',
+      page: ParallaxFlowScreen.route,
+    ),
   ];
 
   @override

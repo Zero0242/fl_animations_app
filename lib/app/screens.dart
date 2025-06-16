@@ -12,6 +12,7 @@ export 'image/image_colors_screen.dart';
 export 'map/map_screen.dart';
 export 'music/audio_waves_screen.dart';
 export 'music/music_screen.dart';
+export 'parallax/parallax_flow_screen.dart';
 export 'pinterest/pinterest_screen.dart';
 export 'pinterest/pokemon_detail_screen.dart';
 export 'progress/circular_progress_screen.dart';

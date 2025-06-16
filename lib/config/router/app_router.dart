@@ -86,6 +86,10 @@ final goRouterProvider = Provider<GoRouter>((ref) {
             builder: (context, state) => const SkeletonScreen(),
           ),
           GoRoute(
+            path: ParallaxFlowScreen.route,
+            builder: (context, state) => const ParallaxFlowScreen(),
+          ),
+          GoRoute(
             path: AudioWavesScreen.route,
             builder: (context, state) => const AudioWavesScreen(),
           ),
