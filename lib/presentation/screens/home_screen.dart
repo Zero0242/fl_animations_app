@@ -12,72 +12,72 @@ class HomeScreen extends ConsumerWidget {
   static const String route = '/';
 
   List<_Route> get _pages => [
-        _Route(
-          icon: FontAwesomeIcons.paintRoller,
-          titulo: 'Headers',
-          page: HeadersHomeScreen.route,
-        ),
-        _Route(
-          icon: FontAwesomeIcons.buffer,
-          titulo: 'Animaciones',
-          page: AnimationScreen.route,
-        ),
-        _Route(
-          icon: FontAwesomeIcons.slideshare,
-          titulo: 'SlideShow',
-          page: SlideShowScreen.route,
-        ),
-        _Route(
-          icon: FontAwesomeIcons.truckMedical,
-          titulo: 'Emergencia',
-          page: EmergencyScreen.route,
-        ),
-        _Route(
-          icon: FontAwesomeIcons.circleNotch,
-          titulo: 'Barra Progreso',
-          page: CircularProgressScreen.route,
-        ),
-        _Route(
-          icon: FontAwesomeIcons.pinterest,
-          titulo: 'Pinterest Grid',
-          page: PinterestScreen.route,
-        ),
-        _Route(
-          icon: FontAwesomeIcons.photoFilm,
-          titulo: 'Imagenes',
-          page: ImageColorsScreen.route,
-        ),
-        _Route(
-          icon: FontAwesomeIcons.mapLocation,
-          titulo: 'Mapa',
-          page: MapScreen.route,
-        ),
-        _Route(
-          icon: FontAwesomeIcons.mobileRetro,
-          titulo: 'Sensores',
-          page: SensorsHome.route,
-        ),
-        _Route(
-          icon: FontAwesomeIcons.skull,
-          titulo: 'Esqueleto',
-          page: SkeletonScreen.route,
-        ),
-        _Route(
-          icon: FontAwesomeIcons.shoePrints,
-          titulo: 'Zapatos',
-          page: ShoesScreen.route,
-        ),
-        _Route(
-          icon: FontAwesomeIcons.music,
-          titulo: 'Musica',
-          page: MusicScreen.route,
-        ),
-        _Route(
-          icon: FontAwesomeIcons.music,
-          titulo: 'Audio Waves',
-          page: AudioWavesScreen.route,
-        ),
-      ];
+    _Route(
+      icon: FontAwesomeIcons.paintRoller,
+      titulo: 'Headers',
+      page: HeadersHomeScreen.route,
+    ),
+    _Route(
+      icon: FontAwesomeIcons.buffer,
+      titulo: 'Animaciones',
+      page: AnimationScreen.route,
+    ),
+    _Route(
+      icon: FontAwesomeIcons.slideshare,
+      titulo: 'SlideShow',
+      page: SlideShowScreen.route,
+    ),
+    _Route(
+      icon: FontAwesomeIcons.truckMedical,
+      titulo: 'Emergencia',
+      page: EmergencyScreen.route,
+    ),
+    _Route(
+      icon: FontAwesomeIcons.circleNotch,
+      titulo: 'Barra Progreso',
+      page: CircularProgressScreen.route,
+    ),
+    _Route(
+      icon: FontAwesomeIcons.pinterest,
+      titulo: 'Pinterest Grid',
+      page: PinterestScreen.route,
+    ),
+    _Route(
+      icon: FontAwesomeIcons.photoFilm,
+      titulo: 'Imagenes',
+      page: ImageColorsScreen.route,
+    ),
+    _Route(
+      icon: FontAwesomeIcons.mapLocation,
+      titulo: 'Mapa',
+      page: MapScreen.route,
+    ),
+    _Route(
+      icon: FontAwesomeIcons.mobileRetro,
+      titulo: 'Sensores',
+      page: SensorsHome.route,
+    ),
+    _Route(
+      icon: FontAwesomeIcons.skull,
+      titulo: 'Esqueleto',
+      page: SkeletonScreen.route,
+    ),
+    _Route(
+      icon: FontAwesomeIcons.shoePrints,
+      titulo: 'Zapatos',
+      page: ShoesScreen.route,
+    ),
+    _Route(
+      icon: FontAwesomeIcons.music,
+      titulo: 'Musica',
+      page: MusicScreen.route,
+    ),
+    _Route(
+      icon: FontAwesomeIcons.music,
+      titulo: 'Audio Waves',
+      page: AudioWavesScreen.route,
+    ),
+  ];
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -115,8 +115,8 @@ class HomeScreen extends ConsumerWidget {
             leading: FaIcon(config.icon),
             title: Text(config.titulo),
             trailing: const FaIcon(FontAwesomeIcons.chevronRight),
-            onTap: () async {
-              context.push(config.page);
+            onTap: () {
+              context.go(config.page);
             },
           );
         },

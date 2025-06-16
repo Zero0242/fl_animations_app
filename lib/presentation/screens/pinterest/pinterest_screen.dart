@@ -77,18 +77,9 @@ class _PinterestMenu extends StatelessWidget {
       duration: const Duration(milliseconds: 500),
       child: FloatingActionMenu(
         children: <Widget>[
-          IconButton(
-            icon: const Icon(Icons.pie_chart),
-            onPressed: () {},
-          ),
-          IconButton(
-            icon: const Icon(Icons.search),
-            onPressed: () {},
-          ),
-          IconButton(
-            icon: const Icon(Icons.notifications),
-            onPressed: () {},
-          ),
+          IconButton(icon: const Icon(Icons.pie_chart), onPressed: () {}),
+          IconButton(icon: const Icon(Icons.search), onPressed: () {}),
+          IconButton(icon: const Icon(Icons.notifications), onPressed: () {}),
           IconButton(
             icon: const Icon(Icons.supervised_user_circle),
             onPressed: () {},
@@ -120,7 +111,7 @@ class _TileElement extends StatelessWidget {
       ),
       child: InkWell(
         onTap: () {
-          context.push('${PinterestScreen.route}/${index + 1}');
+          context.go('${PinterestScreen.route}/${index + 1}');
         },
         child: CircleAvatar(
           child: CachedNetworkImage(

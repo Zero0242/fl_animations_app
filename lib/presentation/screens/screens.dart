@@ -8,7 +8,7 @@ export 'audio_waves/audio_waves_screen.dart';
 export 'demo/demo_screen.dart';
 export 'emergency/emergency_screen.dart';
 export 'headers/headers_home_screen.dart';
-export 'home/home_screen.dart';
+export 'home_screen.dart';
 export 'image/image_colors_screen.dart';
 export 'map/map_screen.dart';
 export 'music/music_screen.dart';

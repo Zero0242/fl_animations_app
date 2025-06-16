@@ -33,7 +33,7 @@ class _ShoesScreenState extends State<ShoesScreen> {
                   tag: 'uwuowo',
                   child: ShoePreview(
                     onTap: () {
-                      context.push(ShoesDetailsScreen.route);
+                      context.go(ShoesDetailsScreen.route);
                     },
                   ),
                 ),
