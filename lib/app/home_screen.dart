@@ -1,6 +1,6 @@
+import 'package:fl_animaciones/app/screens.dart';
 import 'package:fl_animaciones/config/config.dart';
 import 'package:fl_animaciones/presentation/providers/providers.dart';
-import 'package:fl_animaciones/presentation/screens/screens.dart';
 import 'package:fl_animaciones/presentation/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';

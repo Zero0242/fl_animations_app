@@ -1,4 +1,4 @@
-import 'package:fl_animaciones/presentation/screens/screens.dart';
+import 'package:fl_animaciones/app/screens.dart';
 import 'package:fl_animaciones/presentation/widgets/home_menu_item.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -8,37 +8,37 @@ class SensorsHome extends StatelessWidget {
   static const String route = '/sensors/home';
 
   List<_Route> get _routes => [
-        _Route(
-          icon: FontAwesomeIcons.compass,
-          titulo: 'Brujula',
-          page: CompassScreen.route,
-        ),
-        _Route(
-          icon: FontAwesomeIcons.rotate,
-          titulo: 'Giroscopio',
-          page: GyroscopeScreen.route,
-        ),
-        _Route(
-          icon: FontAwesomeIcons.carOn,
-          titulo: 'Acelerometro',
-          page: AccelerometerScreen.route,
-        ),
-        _Route(
-          icon: FontAwesomeIcons.magnet,
-          titulo: 'Magnetometro',
-          page: MagnetometerScreen.route,
-        ),
-        _Route(
-          icon: FontAwesomeIcons.baseball,
-          titulo: 'Bolas',
-          page: GyroscopeBallScreen.route,
-        ),
-        _Route(
-          icon: FontAwesomeIcons.imagePortrait,
-          titulo: 'Tilt Imagen',
-          page: TiltImageScreen.route,
-        ),
-      ];
+    _Route(
+      icon: FontAwesomeIcons.compass,
+      titulo: 'Brujula',
+      page: CompassScreen.route,
+    ),
+    _Route(
+      icon: FontAwesomeIcons.rotate,
+      titulo: 'Giroscopio',
+      page: GyroscopeScreen.route,
+    ),
+    _Route(
+      icon: FontAwesomeIcons.carOn,
+      titulo: 'Acelerometro',
+      page: AccelerometerScreen.route,
+    ),
+    _Route(
+      icon: FontAwesomeIcons.magnet,
+      titulo: 'Magnetometro',
+      page: MagnetometerScreen.route,
+    ),
+    _Route(
+      icon: FontAwesomeIcons.baseball,
+      titulo: 'Bolas',
+      page: GyroscopeBallScreen.route,
+    ),
+    _Route(
+      icon: FontAwesomeIcons.imagePortrait,
+      titulo: 'Tilt Imagen',
+      page: TiltImageScreen.route,
+    ),
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(

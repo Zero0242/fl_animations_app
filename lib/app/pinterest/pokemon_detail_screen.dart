@@ -1,6 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:fl_animaciones/app/screens.dart';
 import 'package:fl_animaciones/presentation/providers/providers.dart';
-import 'package:fl_animaciones/presentation/screens/screens.dart';
 import 'package:fl_animaciones/presentation/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -25,10 +25,7 @@ class PokemonDetailScreen extends ConsumerWidget {
                 begin: const Offset(500, 0),
                 end: const Offset(0, 0),
                 child: HeartBeatAnimation(
-                  child: CachedNetworkImage(
-                    imageUrl: data.avatar,
-                    height: 200,
-                  ),
+                  child: CachedNetworkImage(imageUrl: data.avatar, height: 200),
                 ),
               ),
             ],
