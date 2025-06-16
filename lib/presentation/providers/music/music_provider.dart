@@ -1,18 +1,28 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 final audioPlayerProvider =
-    StateNotifierProvider.autoDispose<AudioPlayerNotifier, AudioPlayerState>(
-        (ref) {
-  return AudioPlayerNotifier();
-});
+    StateNotifierProvider.autoDispose<AudioPlayerNotifier, AudioPlayerState>((
+      ref,
+    ) {
+      return AudioPlayerNotifier();
+    });
 
 class AudioPlayerNotifier extends StateNotifier<AudioPlayerState> {
   AudioPlayerNotifier() : super(AudioPlayerState());
 
+  @override
+  void dispose() {
+    state.controller?.dispose();
+    super.dispose();
+  }
+
   void setController(AnimationController controller) {
     WidgetsBinding.instance.addPostFrameCallback((s) {
+      log('Set controller', name: 'AUDIOPLAYER');
       state = state.copyWith(controller: controller);
     });
   }

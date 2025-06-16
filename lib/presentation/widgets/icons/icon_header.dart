@@ -47,11 +47,7 @@ class IconHeader extends StatelessWidget {
                 color: Colors.white.withValues(alpha: 0.7),
               ),
             ),
-            FaIcon(
-              icon,
-              size: 80,
-              color: Colors.white,
-            ),
+            FaIcon(icon, size: 80, color: Colors.white),
           ],
         ),
         Positioned(

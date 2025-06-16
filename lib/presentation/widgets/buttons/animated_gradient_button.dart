@@ -59,16 +59,8 @@ class _AnimatedGradientButtonState extends State<AnimatedGradientButton>
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(widget.borderRadius),
               gradient: LinearGradient(
-                colors: <Color>[
-                  primaryColor,
-                  secondaryColor,
-                  primaryColor,
-                ],
-                stops: <double>[
-                  0.0,
-                  _controller!.value,
-                  1.0,
-                ],
+                colors: <Color>[primaryColor, secondaryColor, primaryColor],
+                stops: <double>[0.0, _controller!.value, 1.0],
               ),
             ),
             child: child,

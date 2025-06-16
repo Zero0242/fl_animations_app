@@ -68,11 +68,7 @@ class _SkeletonContainerState extends State<SkeletonContainer>
                 widget.shimmerColor,
                 widget.backgroundColor,
               ],
-              stops: <double>[
-                0.0,
-                _animation!.value,
-                1.0,
-              ],
+              stops: <double>[0.0, _animation!.value, 1.0],
             ),
           ),
         );

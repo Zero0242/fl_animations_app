@@ -5,8 +5,8 @@ import 'package:permission_handler/permission_handler.dart';
 
 final permissionsProvider =
     StateNotifierProvider<PermissionNotifier, PermissionState>((ref) {
-  return PermissionNotifier();
-});
+      return PermissionNotifier();
+    });
 
 class PermissionNotifier extends StateNotifier<PermissionState> {
   PermissionNotifier() : super(PermissionState()) {
@@ -90,15 +90,14 @@ class PermissionState {
     PermissionStatus? location,
     PermissionStatus? locationAlways,
     PermissionStatus? locationWhenInUse,
-  }) =>
-      PermissionState(
-        camera: camera ?? this.camera,
-        photoLibrary: photoLibrary ?? this.photoLibrary,
-        sensors: sensors ?? this.sensors,
-        location: location ?? this.location,
-        locationAlways: locationAlways ?? this.locationAlways,
-        locationWhenInUse: locationWhenInUse ?? this.locationWhenInUse,
-      );
+  }) => PermissionState(
+    camera: camera ?? this.camera,
+    photoLibrary: photoLibrary ?? this.photoLibrary,
+    sensors: sensors ?? this.sensors,
+    location: location ?? this.location,
+    locationAlways: locationAlways ?? this.locationAlways,
+    locationWhenInUse: locationWhenInUse ?? this.locationWhenInUse,
+  );
 
   bool get cameraGranted {
     return camera == PermissionStatus.granted;

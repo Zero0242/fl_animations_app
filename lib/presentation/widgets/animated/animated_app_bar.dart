@@ -33,8 +33,6 @@ class AnimatedAppBar extends StatelessWidget implements PreferredSizeWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Para saber si hay que meter si o si el backbutton
-    final canGoBack = Navigator.of(context).canPop();
     // Previene estorbo con el safearea superiror
     final topPadding = MediaQuery.of(context).padding.top;
 
@@ -54,9 +52,8 @@ class AnimatedAppBar extends StatelessWidget implements PreferredSizeWidget {
                 mainAxisSize: MainAxisSize.max,
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[
-                  if (leading != null) leading!,
-                  if (leading == null && canGoBack) const BackButton(),
-                  if (title != null) title!,
+                  ?leading,
+                  ?title,
                   if (actions != null)
                     Row(
                       mainAxisSize: MainAxisSize.min,
@@ -67,7 +64,7 @@ class AnimatedAppBar extends StatelessWidget implements PreferredSizeWidget {
                     fakeButtonSpace(),
                 ],
               ),
-              if (bottom != null) bottom!,
+              ?bottom,
             ],
           ),
         ),
@@ -89,7 +86,8 @@ class AnimatedAppBar extends StatelessWidget implements PreferredSizeWidget {
     return Theme(
       data: themeRef.copyWith(iconTheme: IconThemeData(color: foregroundColor)),
       child: DefaultTextStyle(
-        style: style ??
+        style:
+            style ??
             GoogleFonts.montserratAlternates(
               color: foregroundColor,
               fontSize: 22,

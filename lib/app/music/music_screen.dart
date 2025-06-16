@@ -68,13 +68,14 @@ class MusicScreen extends ConsumerWidget {
               const SizedBox(height: 70),
               // * Disco
               Row(
+                spacing: 20,
                 children: <Widget>[
                   MusicDisc(
                     discImage: _musicDemo.albumCover,
-                    getController:
-                        ref.read(audioPlayerProvider.notifier).setController,
+                    getController: ref
+                        .read(audioPlayerProvider.notifier)
+                        .setController,
                   ),
-                  const SizedBox(width: 20),
                   MusicProgress(
                     current: audioPlayer.songProgress,
                     totalDuration: audioPlayer.songTotalDuration,
@@ -85,9 +86,7 @@ class MusicScreen extends ConsumerWidget {
               // * Title
               MusicTitlePlay(audioSource: _musicDemo.asset),
               // * Lyrics
-              Expanded(
-                child: MusicLyrics(lyrics: _musicDemo.lyrics),
-              ),
+              Expanded(child: MusicLyrics(lyrics: _musicDemo.lyrics)),
             ],
           ),
         ],
@@ -110,10 +109,7 @@ class _Background extends StatelessWidget {
         gradient: LinearGradient(
           begin: Alignment.centerLeft,
           end: Alignment.center,
-          colors: <Color>[
-            Color(0xff33333e),
-            Color(0xff201e28),
-          ],
+          colors: <Color>[Color(0xff33333e), Color(0xff201e28)],
         ),
       ),
     );

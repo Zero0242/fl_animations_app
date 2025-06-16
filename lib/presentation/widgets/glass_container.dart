@@ -51,8 +51,10 @@ class GlassContainer extends StatelessWidget {
     return ClipRRect(
       borderRadius: borderRadius,
       child: BackdropFilter(
-        filter:
-            ImageFilter.blur(sigmaX: glassIntensity, sigmaY: glassIntensity),
+        filter: ImageFilter.blur(
+          sigmaX: glassIntensity,
+          sigmaY: glassIntensity,
+        ),
         child: AnimatedContainer(
           duration: const Duration(milliseconds: 500),
           margin: margin,

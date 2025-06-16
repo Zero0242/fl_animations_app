@@ -7,8 +7,8 @@ class LocalAuthPlugin {
   static final LocalAuthentication auth = LocalAuthentication();
 
   static void avaliableBiometrics() async {
-    final List<BiometricType> biometricsList =
-        await auth.getAvailableBiometrics();
+    final List<BiometricType> biometricsList = await auth
+        .getAvailableBiometrics();
 
     if (biometricsList.isNotEmpty) {
       // some things

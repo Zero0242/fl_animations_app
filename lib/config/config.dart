@@ -7,5 +7,6 @@ export 'constants/storage_constants.dart';
 export 'helpers/dominant_colors.dart';
 export 'helpers/status_bar_utils.dart';
 export 'plugins/local_auth_plugin.dart';
+export 'plugins/riverpod_addons.dart';
 export 'router/app_router.dart';
 export 'theme/app_theme.dart';

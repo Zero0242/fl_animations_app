@@ -100,11 +100,7 @@ class _UserMarkerState extends State<UserMarker>
               ),
               alignment: Alignment.center,
             ),
-            const SizedBox(
-              height: 50,
-              width: 50,
-              child: FlutterLogo(),
-            ),
+            const SizedBox(height: 50, width: 50, child: FlutterLogo()),
           ],
         );
       },
@@ -123,10 +119,7 @@ class UserLocationLayer extends ConsumerWidget {
     return MarkerLayer(
       markers: watchPosition$.when(
         data: (data) => [
-          Marker(
-            point: LatLng(data.$1, data.$2),
-            child: userMarker,
-          ),
+          Marker(point: LatLng(data.$1, data.$2), child: userMarker),
         ],
         error: (error, _) => [],
         loading: () => [],

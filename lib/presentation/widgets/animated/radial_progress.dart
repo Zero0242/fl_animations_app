@@ -64,7 +64,8 @@ class _RadialProgressAnimationState extends State<RadialProgressAnimation>
               progressBarThickness: widget.progressBarThickness,
               backgroundThickness: widget.backgroundThickness,
               gradient: widget.gradient,
-              porcentaje: (widget.porcentaje - diferenciaAnimar) +
+              porcentaje:
+                  (widget.porcentaje - diferenciaAnimar) +
                   (diferenciaAnimar * _controller.value),
             ),
           ),

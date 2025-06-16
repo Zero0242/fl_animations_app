@@ -26,9 +26,10 @@ class _CircularAnimationState extends State<CircularAnimation>
       vsync: this,
       duration: const Duration(milliseconds: 2000),
     );
-    _animation = Tween<double>(begin: 0.0, end: math.pi * 2).animate(
-      _controller!,
-    );
+    _animation = Tween<double>(
+      begin: 0.0,
+      end: math.pi * 2,
+    ).animate(_controller!);
     // _movementVertical = Tween<double>(begin: -1, end: 1).animate(
     //   CurvedAnimation(
     //     parent: _controller!,
@@ -78,10 +79,7 @@ class _CircularAnimationState extends State<CircularAnimation>
             center: Alignment.topCenter,
             radius: 0.7,
             stops: [0.3, 1],
-            colors: [
-              Colors.yellow,
-              Colors.orange,
-            ],
+            colors: [Colors.yellow, Colors.orange],
           ),
         ),
       ),

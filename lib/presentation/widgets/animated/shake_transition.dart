@@ -22,14 +22,8 @@ class ShakeTransition extends StatelessWidget {
       builder: (context, value, child) {
         return Transform.translate(
           offset: axis == Axis.horizontal
-              ? Offset(
-                  value * offset,
-                  0.0,
-                )
-              : Offset(
-                  0.0,
-                  value * offset,
-                ),
+              ? Offset(value * offset, 0.0)
+              : Offset(0.0, value * offset),
           child: child,
         );
       },

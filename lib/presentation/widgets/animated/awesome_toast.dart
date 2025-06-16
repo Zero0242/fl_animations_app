@@ -19,8 +19,10 @@ class AwesomeToast {
     ToastType? type,
     Duration duration = const Duration(seconds: 2),
     bool isLoading = false,
-    TextStyle? textStyle =
-        const TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
+    TextStyle? textStyle = const TextStyle(
+      fontWeight: FontWeight.bold,
+      fontSize: 18,
+    ),
   }) {
     return AwesomeToast(
       context: context,

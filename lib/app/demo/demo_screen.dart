@@ -22,9 +22,7 @@ class DemoScreen extends StatelessWidget {
               shape: BoxShape.circle,
               color: Colors.orange,
             ),
-            child: CustomPaint(
-              painter: CircularItemPainter(),
-            ),
+            child: CustomPaint(painter: CircularItemPainter()),
           ),
         ],
       ),

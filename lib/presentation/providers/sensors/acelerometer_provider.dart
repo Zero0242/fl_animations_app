@@ -3,16 +3,17 @@ import 'package:sensors_plus/sensors_plus.dart' as sensors;
 
 final accelerometerGravityProvider =
     StreamProvider.autoDispose<AccelerometerXYZ>((ref) async* {
-  await for (final event in sensors.accelerometerEventStream()) {
-    final x = double.parse(event.x.toStringAsFixed(2));
-    final y = double.parse(event.y.toStringAsFixed(2));
-    final z = double.parse(event.z.toStringAsFixed(2));
-    yield AccelerometerXYZ(x, y, z);
-  }
-});
+      await for (final event in sensors.accelerometerEventStream()) {
+        final x = double.parse(event.x.toStringAsFixed(2));
+        final y = double.parse(event.y.toStringAsFixed(2));
+        final z = double.parse(event.z.toStringAsFixed(2));
+        yield AccelerometerXYZ(x, y, z);
+      }
+    });
 
-final accelerometerUserProvider =
-    StreamProvider.autoDispose<AccelerometerXYZ>((ref) async* {
+final accelerometerUserProvider = StreamProvider.autoDispose<AccelerometerXYZ>((
+  ref,
+) async* {
   await for (final event in sensors.userAccelerometerEventStream()) {
     final x = double.parse(event.x.toStringAsFixed(2));
     final y = double.parse(event.y.toStringAsFixed(2));

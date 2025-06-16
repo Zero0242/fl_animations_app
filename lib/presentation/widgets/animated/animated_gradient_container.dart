@@ -35,15 +35,13 @@ class _AnimatedGradientContainerState extends State<AnimatedGradientContainer>
   void initState() {
     super.initState();
     _controller = AnimationController(vsync: this, duration: widget.duration);
-    _fadeColor = ColorTween(
-      begin: widget.secondaryColor,
-      end: widget.mainColor,
-    ).animate(
-      CurvedAnimation(
-        parent: _controller,
-        curve: const Interval(0.85, 1, curve: Curves.linear),
-      ),
-    );
+    _fadeColor = ColorTween(begin: widget.secondaryColor, end: widget.mainColor)
+        .animate(
+          CurvedAnimation(
+            parent: _controller,
+            curve: const Interval(0.85, 1, curve: Curves.linear),
+          ),
+        );
     _controller.repeat(reverse: widget.repeat);
   }
 
@@ -68,11 +66,7 @@ class _AnimatedGradientContainerState extends State<AnimatedGradientContainer>
                 _fadeColor.value ?? widget.secondaryColor,
                 widget.mainColor,
               ],
-              stops: <double>[
-                0.0,
-                _controller.value,
-                1.0,
-              ],
+              stops: <double>[0.0, _controller.value, 1.0],
               end: Alignment.topRight,
               begin: Alignment.bottomLeft,
             ),

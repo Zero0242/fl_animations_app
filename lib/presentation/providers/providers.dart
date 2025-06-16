@@ -4,6 +4,7 @@
 library;
 
 export 'map/map_provider.dart';
+export 'music/audio_wave_provider.dart';
 export 'music/music_provider.dart';
 export 'permissions/permissions_provider.dart';
 export 'pinterest/pokemon_provider.dart';

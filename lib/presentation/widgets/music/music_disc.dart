@@ -18,10 +18,7 @@ class MusicDisc extends StatelessWidget {
         shape: BoxShape.circle,
         gradient: LinearGradient(
           begin: Alignment.topLeft,
-          colors: [
-            Color(0xff484750),
-            Color(0xff1e1c24),
-          ],
+          colors: [Color(0xff484750), Color(0xff1e1c24)],
         ),
       ),
       width: 250,

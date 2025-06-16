@@ -36,8 +36,10 @@ class _HeartBeatImageState extends State<HeartBeatImage>
               default:
             }
           });
-    _animation =
-        Tween<double>(begin: 1.0, end: 0.0).animate(_animationController!);
+    _animation = Tween<double>(
+      begin: 1.0,
+      end: 0.0,
+    ).animate(_animationController!);
     super.initState();
   }
 

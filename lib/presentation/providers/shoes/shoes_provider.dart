@@ -2,8 +2,8 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 final shoeStoreProvider =
     StateNotifierProvider.autoDispose<ShoeStoreNotifier, ShoeStoreState>((ref) {
-  return ShoeStoreNotifier();
-});
+      return ShoeStoreNotifier();
+    });
 
 class ShoeStoreNotifier extends StateNotifier<ShoeStoreState> {
   ShoeStoreNotifier() : super(ShoeStoreState());
@@ -18,18 +18,12 @@ class ShoeStoreNotifier extends StateNotifier<ShoeStoreState> {
 }
 
 class ShoeStoreState {
-  ShoeStoreState({
-    this.asset = 'assets/shoes/azul.png',
-    this.talla = 9.0,
-  });
+  ShoeStoreState({this.asset = 'assets/shoes/azul.png', this.talla = 9.0});
 
   final String asset;
   final double talla;
 
-  ShoeStoreState copyWith({
-    String? asset,
-    double? talla,
-  }) {
+  ShoeStoreState copyWith({String? asset, double? talla}) {
     return ShoeStoreState(
       asset: asset ?? this.asset,
       talla: talla ?? this.talla,

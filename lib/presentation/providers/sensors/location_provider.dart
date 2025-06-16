@@ -1,8 +1,9 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:geolocator/geolocator.dart';
 
-final userLocationProvider =
-    FutureProvider.autoDispose<(double, double)>((ref) async {
+final userLocationProvider = FutureProvider.autoDispose<(double, double)>((
+  ref,
+) async {
   bool serviceEnabled;
   LocationPermission permission;
 
@@ -27,8 +28,9 @@ final userLocationProvider =
   return (location.latitude, location.longitude);
 });
 
-final watchLocationProvider =
-    StreamProvider.autoDispose<(double, double)>((ref) async* {
+final watchLocationProvider = StreamProvider.autoDispose<(double, double)>((
+  ref,
+) async* {
   bool serviceEnabled;
   LocationPermission permission;
 

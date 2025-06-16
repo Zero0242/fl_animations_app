@@ -13,13 +13,13 @@ class AppTheme {
 
   /// Método para traer el tema
   ThemeData getTheme() => ThemeData(
-        useMaterial3: true,
-        colorSchemeSeed: _seedColor,
-        brightness: _getBrightness(),
-        textTheme: GoogleFonts.openSansTextTheme(
-          // * Se usa este truco, para que la letra del texto
-          // * Se adapte en modo oscuro y luz
-          ThemeData(brightness: _getBrightness()).textTheme,
-        ),
-      );
+    useMaterial3: true,
+    colorSchemeSeed: _seedColor,
+    brightness: _getBrightness(),
+    textTheme: GoogleFonts.openSansTextTheme(
+      // * Se usa este truco, para que la letra del texto
+      // * Se adapte en modo oscuro y luz
+      ThemeData(brightness: _getBrightness()).textTheme,
+    ),
+  );
 }

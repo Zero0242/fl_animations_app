@@ -69,8 +69,8 @@ class _SliderDots extends ConsumerWidget {
 // Manejo de estado con riverpod
 final _slideIndexProvider =
     AutoDisposeNotifierProvider<_SlideIndexNotifier, int>(
-  _SlideIndexNotifier.new,
-);
+      _SlideIndexNotifier.new,
+    );
 
 class _SlideIndexNotifier extends AutoDisposeNotifier<int> {
   @override

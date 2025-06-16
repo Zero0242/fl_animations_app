@@ -1,8 +1,9 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:sensors_plus/sensors_plus.dart' as sensors;
 
-final gyroscopeProvider =
-    StreamProvider.autoDispose<GyroscopetXYZ>((ref) async* {
+final gyroscopeProvider = StreamProvider.autoDispose<GyroscopetXYZ>((
+  ref,
+) async* {
   await for (final event in sensors.gyroscopeEventStream()) {
     final x = double.parse(event.x.toStringAsFixed(2));
     final y = double.parse(event.y.toStringAsFixed(2));

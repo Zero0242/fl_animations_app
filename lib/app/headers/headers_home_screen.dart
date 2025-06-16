@@ -114,7 +114,7 @@ class _ExperimentHeaderState extends State<_ExperimentHeader>
 
 class AnimatedHeaderPainter extends CustomPainter {
   AnimatedHeaderPainter({required this.listenable})
-      : super(repaint: listenable);
+    : super(repaint: listenable);
 
   final Animation<double> listenable;
 
@@ -131,28 +131,15 @@ class AnimatedHeaderPainter extends CustomPainter {
         size.width * 0.5,
         refHeight,
       )
-      ..quadraticBezierTo(
-        size.width * 0.75,
-        minPoint,
-        size.width,
-        refHeight,
-      )
+      ..quadraticBezierTo(size.width * 0.75, minPoint, size.width, refHeight)
       ..lineTo(size.width, 0)
       ..lineTo(0, 0);
     final paint = Paint();
 
     final rect = Offset.zero & size;
     paint.shader = LinearGradient(
-      colors: const [
-        Color(0xff40E0D0),
-        Color(0xffFF8C00),
-        Color(0xffFF0080),
-      ],
-      stops: [
-        0.0,
-        listenable.value,
-        1.0,
-      ],
+      colors: const [Color(0xff40E0D0), Color(0xffFF8C00), Color(0xffFF0080)],
+      stops: [0.0, listenable.value, 1.0],
     ).createShader(rect);
 
     canvas.drawPath(path, paint);

@@ -4,10 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class MusicTitlePlay extends ConsumerStatefulWidget {
-  const MusicTitlePlay({
-    super.key,
-    required this.audioSource,
-  });
+  const MusicTitlePlay({super.key, required this.audioSource});
   final Source audioSource;
 
   @override

@@ -27,10 +27,7 @@ class _ShoesDetailsScreenState extends State<ShoesDetailsScreen> {
         children: <Widget>[
           Stack(
             children: <Widget>[
-              Hero(
-                tag: 'uwuowo',
-                child: ShoePreview.fullScreen(),
-              ),
+              Hero(tag: 'uwuowo', child: ShoePreview.fullScreen()),
               Positioned(
                 top: 60,
                 child: FloatingActionButton.small(
@@ -89,11 +86,7 @@ class _ShoesDetailsScreenState extends State<ShoesDetailsScreen> {
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: <Widget>[
                         const _BotonPreferencia(
-                          Icon(
-                            Icons.star,
-                            color: Colors.red,
-                            size: 25,
-                          ),
+                          Icon(Icons.star, color: Colors.red, size: 25),
                         ),
                         _BotonPreferencia(
                           Icon(

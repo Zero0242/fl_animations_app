@@ -61,11 +61,7 @@ class _CustomRadialProgress extends StatelessWidget {
         porcentaje: porcentaje,
         primaryColor: Colors.blue,
         gradient: const LinearGradient(
-          colors: [
-            Color(0xffc012ff),
-            Color(0xff6d05e8),
-            Colors.red,
-          ],
+          colors: [Color(0xffc012ff), Color(0xff6d05e8), Colors.red],
         ),
       ),
     );
@@ -75,8 +71,8 @@ class _CustomRadialProgress extends StatelessWidget {
 // Gestor de estado
 final _progressProvider =
     AutoDisposeNotifierProvider<_ProgressNotifier, double>(
-  _ProgressNotifier.new,
-);
+      _ProgressNotifier.new,
+    );
 
 class _ProgressNotifier extends AutoDisposeNotifier<double> {
   @override

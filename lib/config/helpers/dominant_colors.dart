@@ -8,18 +8,13 @@ import 'package:image/image.dart' as imagelib;
 
 class DominantColors {
   // We want to extract two dominant colors
-  DominantColors({
-    required this.bytes,
-    required this.dominantColorsCount,
-  });
+  DominantColors({required this.bytes, required this.dominantColorsCount});
   final Uint8List bytes;
   int dominantColorsCount = 2;
 
   // Calculate Euclidean distance between two colors
   double distance(Color a, Color b) {
-    return sqrt(
-      pow(a.r - b.r, 2) + pow(a.g - b.g, 2) + pow(a.b - b.b, 2),
-    );
+    return sqrt(pow(a.r - b.r, 2) + pow(a.g - b.g, 2) + pow(a.b - b.b, 2));
   }
 
   // Cluster colors using K-means++ and return centroids
@@ -30,8 +25,10 @@ class DominantColors {
 
     while (_isConverging(centroids, oldCentroids)) {
       oldCentroids = List.from(centroids);
-      List<List<Color>> clusters =
-          List.generate(dominantColorsCount, (index) => []);
+      List<List<Color>> clusters = List.generate(
+        dominantColorsCount,
+        (index) => [],
+      );
 
       for (var color in colors) {
         int closestIndex = _findClosestCentroid(color, centroids);
@@ -91,7 +88,8 @@ class DominantColors {
       if (width > 1300) {
         sampling = 10;
       }
-      var heightTakenForColors = height /
+      var heightTakenForColors =
+          height /
           2; //half of the image is always enough, compared to full image
       var widthTakenForColors = width / 2;
 

@@ -27,10 +27,7 @@ class ShoeButton extends StatelessWidget {
           color: color,
           borderRadius: BorderRadius.circular(100),
         ),
-        child: Text(
-          text,
-          style: const TextStyle(color: Colors.white),
-        ),
+        child: Text(text, style: const TextStyle(color: Colors.white)),
       ),
     );
   }

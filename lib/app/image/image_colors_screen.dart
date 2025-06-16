@@ -18,8 +18,10 @@ class _ImageColorsScreenState extends State<ImageColorsScreen> {
 
   List<Color> get imageColors {
     if (_pickedFile == null) return [];
-    return DominantColors(bytes: _pickedFile!, dominantColorsCount: 8)
-        .extractDominantColors();
+    return DominantColors(
+      bytes: _pickedFile!,
+      dominantColorsCount: 8,
+    ).extractDominantColors();
   }
 
   void _onImageSelect() async {
@@ -62,11 +64,7 @@ class _ImageColorsScreenState extends State<ImageColorsScreen> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 for (final color in imageColors)
-                  Container(
-                    height: 70,
-                    width: 30,
-                    color: color,
-                  ),
+                  Container(height: 70, width: 30, color: color),
               ],
             ),
             const SizedBox(height: 30),
@@ -81,11 +79,7 @@ class _ImageColorsScreenState extends State<ImageColorsScreen> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
                       for (final color in snapshot.requireData)
-                        Container(
-                          height: 70,
-                          width: 30,
-                          color: color,
-                        ),
+                        Container(height: 70, width: 30, color: color),
                     ],
                   );
                 }

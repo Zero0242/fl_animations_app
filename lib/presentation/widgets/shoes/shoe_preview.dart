@@ -38,9 +38,7 @@ class ShoePreview extends ConsumerWidget {
         ),
         child: Column(
           children: <Widget>[
-            Expanded(
-              child: Image.asset(shoeImage),
-            ),
+            Expanded(child: Image.asset(shoeImage)),
             if (showSizes)
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -84,9 +82,7 @@ class _ShoeSizes extends ConsumerWidget {
               ),
           ],
         ),
-        child: Center(
-          child: Text('$shoeSize'),
-        ),
+        child: Center(child: Text('$shoeSize')),
       ),
     );
   }

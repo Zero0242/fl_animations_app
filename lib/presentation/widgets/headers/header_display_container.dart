@@ -26,9 +26,7 @@ class HeaderDisplayContainer extends StatelessWidget {
             color: customPainter != null ? null : Colors.orange,
             border: Border.all(color: Colors.grey),
           ),
-          child: CustomPaint(
-            painter: customPainter,
-          ),
+          child: CustomPaint(painter: customPainter),
         ),
         const Divider(),
       ],

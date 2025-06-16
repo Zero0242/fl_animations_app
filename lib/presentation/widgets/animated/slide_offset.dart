@@ -20,10 +20,7 @@ class SlideOffset extends StatelessWidget {
       duration: duration,
       tween: Tween<Offset>(end: end, begin: begin),
       builder: (context, value, child) {
-        return Transform.translate(
-          offset: value,
-          child: child,
-        );
+        return Transform.translate(offset: value, child: child);
       },
       child: child,
     );

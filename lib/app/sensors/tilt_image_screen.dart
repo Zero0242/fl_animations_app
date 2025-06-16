@@ -71,10 +71,7 @@ class CustomImageContainer extends StatelessWidget {
               ],
             ),
           ),
-          Image(
-            image: image,
-            fit: BoxFit.cover,
-          ),
+          Image(image: image, fit: BoxFit.cover),
         ],
       ),
     );
